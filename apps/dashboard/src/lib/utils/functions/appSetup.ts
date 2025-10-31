@@ -97,6 +97,9 @@ export async function getProfile({
     const [regexUsernameMatch] = [...(authUser.email?.matchAll(/(.*)@/g) || [])];
 
     const isGoogleAuth = !!authUser.app_metadata?.providers?.includes('google');
+    
+    // In development, always set email as verified
+    const isEmailVerified = dev ? true : isGoogleAuth;
 
     const { data: newProfileData, error } = await supabase
       .from('profile')
@@ -105,8 +108,8 @@ export async function getProfile({
         username: regexUsernameMatch[1] + `${new Date().getTime()}`,
         fullname: regexUsernameMatch[1],
         email: authUser.email,
-        is_email_verified: isGoogleAuth,
-        verified_at: isGoogleAuth ? new Date().toDateString() : undefined
+        is_email_verified: isEmailVerified,
+        verified_at: isEmailVerified ? new Date().toDateString() : undefined
       })
       .select();
 

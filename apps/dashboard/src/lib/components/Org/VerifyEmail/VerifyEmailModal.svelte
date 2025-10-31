@@ -51,7 +51,10 @@
     }, WAIT_TIME);
   };
 
-  $: open = Boolean(!$profile.is_email_verified && !!$profile.id && !!$currentOrg.id);
+  // Disable email verification in development
+  const isDevelopment = import.meta.env.DEV;
+  
+  $: open = Boolean(!isDevelopment && !$profile.is_email_verified && !!$profile.id && !!$currentOrg.id);
   $: open && sendVerificationCode();
 </script>
 

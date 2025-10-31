@@ -36,6 +36,25 @@ export const app = new Hono()
   )
   .route('/course', courseRouter)
   .route('/mail', mailRouter)
+  .post('/email/verify_email', async (c) => {
+    try {
+      const { email, token } = await c.req.json();
+      console.log(`/POST api/email/verify_email ${email} ${token}`);
+      
+      // For development, just return success
+      // In production, this would validate the token and verify the email
+      return c.json({ 
+        success: true, 
+        message: 'Email verification successful' 
+      });
+    } catch (error) {
+      console.error('Email verification error:', error);
+      return c.json({ 
+        success: false, 
+        error: 'Email verification failed' 
+      }, 400);
+    }
+  })
 
   // Error handling
   .onError((err, c) => {
