@@ -1,194 +1,183 @@
-<a href="https://classroomio.com/">
-  <img alt="ClassroomIO is a no-code tool that allows you build and scale your online bootcamp with ease." src="https://raw.githubusercontent.com/classroomio/classroomio/main/apps/classroomio-com/static/classroomio-opengraph-image.png" />
-  <h1 align="center">ClassroomIO.com</h1>
-  <p align="center">
-    The Open Source Learning Management System for Companies
-    <br />
-    <a href="https://classroomio.com">Website</a>  |  <a href="https://dub.sh/ciodiscord">Join Discord community</a>
-  </p>
-</a>
+# Supabase CLI
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/629e2bb8994345729513c4d69ccbe3d5)](https://app.codacy.com/gh/classroomio/classroomio?utm_source=github.com&utm_medium=referral&utm_content=classroomio/classroomio&utm_campaign=Badge_Grade)
+[![Coverage Status](https://coveralls.io/repos/github/supabase/cli/badge.svg?branch=main)](https://coveralls.io/github/supabase/cli?branch=main) [![Bitbucket Pipelines](https://img.shields.io/bitbucket/pipelines/supabase-cli/setup-cli/master?style=flat-square&label=Bitbucket%20Canary)](https://bitbucket.org/supabase-cli/setup-cli/pipelines) [![Gitlab Pipeline Status](https://img.shields.io/gitlab/pipeline-status/sweatybridge%2Fsetup-cli?label=Gitlab%20Canary)
+](https://gitlab.com/sweatybridge/setup-cli/-/pipelines)
 
-## ✨ About ClassroomIO.com
+[Supabase](https://supabase.io) is an open source Firebase alternative. We're building the features of Firebase using enterprise-grade open source tools.
 
-<img alt="ClassroomIO Courses page" src="https://raw.githubusercontent.com/classroomio/classroomio/main/apps/classroomio-com/static/classroomio-courses.png" />
+This repository contains all the functionality for Supabase CLI.
 
-Streamline training for everyone with ClassroomIO.com. Our all-in-one platform empowers bootcamps, educators, and businesses to manage training programs easily. With our platform, anyone can run multiple classes and cohorts all from one UI. The application is mobile-first, which means that students can access your lesson materials from any device.
+- [x] Running Supabase locally
+- [x] Managing database migrations
+- [x] Creating and deploying Supabase Functions
+- [x] Generating types directly from your database schema
+- [x] Making authenticated HTTP requests to [Management API](https://supabase.com/docs/reference/api/introduction)
 
-### Mission: Provide Students with the Best Learning Experience
+## Getting started
 
-At ClassroomIO, our mission is to provide students with the best possible learning experience. We believe in empowering educators with the tools they need to deliver high-quality education that is accessible, engaging, and effective.
+### Install the CLI
 
-### Key Features
+Available via [NPM](https://www.npmjs.com) as dev dependency. To install:
 
-1. **📚 Advanced Course Management:** You can create unlimited courses, create lessons, invite students, add assignments, grade their assignments, and even generate certificates.
-2. **👨‍👩‍👦 Multi-Teacher Management:** You can invite other teachers into your organization and assign them individual courses.
-3. **🤖 AI Integration:** We've got OpenAI integration for quick course creation where you can generate course content, lesson outlines, and even generate assignments right from your lesson notes.
-4. **💬 Forum:** Students can ask questions in your dedicated community and get answers from either you or other students.
-5. **💻 Dedicated Student Dashboard:** Once you create an account, you get a dedicated dashboard where your students can access all their courses, assignments, and more.
-6. **🔒 Fully open source:** You can self-host the entire stack on your servers.
+```bash
+npm i supabase --save-dev
+```
 
-### Roadmap Features
+To install the beta release channel:
 
-1. **Forms:** Instead of using Google Forms to collect vital information from your students, you will be able to create forms directly within the dashboard.
-2. **Course Templates:** You can clone a full course or share templates with other people.
-3. **Analytics:** You can track data about your students across multiple courses.
-4. **Run Courses on Messengers:** Students can just join a channel on slack/discord/telegram and a bot automatically sends daily lesson content to your students without you doing anything.
+```bash
+npm i supabase@beta --save-dev
+```
 
-Please reach out to me on [twitter](https://x.com/rotimi_best) if you have any feature request.
+When installing with yarn 4, you need to disable experimental fetch with the following nodejs config.
 
-## Built With
+```
+NODE_OPTIONS=--no-experimental-fetch yarn add supabase
+```
 
-- [SvelteKit](https://kit.svelte.dev/?ref=classroomio.com)
-- [Supabase](https://supabase.com/?ref=classroomio.com)
-- [TailwindCSS](https://tailwindcss.com/?ref=classroomio.com)
+> **Note**
+For Bun versions below v1.0.17, you must add `supabase` as a [trusted dependency](https://bun.sh/guides/install/trusted) before running `bun add -D supabase`.
 
-## Get a Demo
+<details>
+  <summary><b>macOS</b></summary>
 
-You can book a quick 15 min demo to see if ClassroomIO is a good fit for you
+  Available via [Homebrew](https://brew.sh). To install:
 
-<a href="https://cal.com/classroomio/demo">
-  <img src="https://cal.com/book-with-cal-dark.svg" alt="Book a Call with ClassroomIO.com">
-</a>
+  ```sh
+  brew install supabase/tap/supabase
+  ```
 
-<!-- GETTING STARTED -->
+  To install the beta release channel:
+  
+  ```sh
+  brew install supabase/tap/supabase-beta
+  brew link --overwrite supabase-beta
+  ```
+  
+  To upgrade:
 
-## Getting Started
+  ```sh
+  brew upgrade supabase
+  ```
+</details>
 
-To get a local copy up and running, please follow these simple steps.
+<details>
+  <summary><b>Windows</b></summary>
 
-### Prerequisites
+  Available via [Scoop](https://scoop.sh). To install:
 
-Here is what you need to be able to run ClassroomIO.com
+  ```powershell
+  scoop bucket add supabase https://github.com/supabase/scoop-bucket.git
+  scoop install supabase
+  ```
 
-- [Node.js](https://nodejs.org/) (Version: >=22.x)
-- [Supabase CLI](https://github.com/supabase/cli)
-- [Docker](https://docs.docker.com/engine/install/)
-- [NPM](https://www.npmjs.com/)
+  To upgrade:
 
-### Project Structure
+  ```powershell
+  scoop update supabase
+  ```
+</details>
 
-This repo is a mono repo that consists of 3 projects:
+<details>
+  <summary><b>Linux</b></summary>
 
-1. `classroomio-com`: The landing page of ClassroomIO hosted [here](https://classroomio.com)
-2. `api`: The api service that handles PDF, video processing, Emailing and Notifications.
-3. `dashboard`: The web application that runs the learning management system hosted [here](https://app.classroomio.com).
-4. `docs`: Official documentation of ClassroomIO hosted [here](https://classroomio.com/docs)
+  Available via [Homebrew](https://brew.sh) and Linux packages.
 
-## Development
+  #### via Homebrew
 
-### Gitpod Setup
+  To install:
 
-1. Click the button below to open this project in Gitpod.
+  ```sh
+  brew install supabase/tap/supabase
+  ```
 
-2. This will open a fully configured workspace in your browser with all the necessary dependencies already installed.
+  To upgrade:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/classroomio/classroomio)
+  ```sh
+  brew upgrade supabase
+  ```
 
-### Local Setup
+  #### via Linux packages
 
-1. Fork the repo, then clone it using the following command (remember to replace the url with the url from your forked repo)
+  Linux packages are provided in [Releases](https://github.com/supabase/cli/releases). To install, download the `.apk`/`.deb`/`.rpm`/`.pkg.tar.zst` file depending on your package manager and run the respective commands.
 
-   ```bash
-   git clone https://github.com/classroomio/classroomio.git
-   ```
+  ```sh
+  sudo apk add --allow-untrusted <...>.apk
+  ```
 
-2. Go to project folder
+  ```sh
+  sudo dpkg -i <...>.deb
+  ```
 
-   ```bash
-   cd classroomio
-   ```
+  ```sh
+  sudo rpm -i <...>.rpm
+  ```
 
-3. Set up Node if your Node version does not meet the project's requirements, as instructed by the documentation., "nvm" (Node Version Manager) allows using Node at the version required by the project:
+  ```sh
+  sudo pacman -U <...>.pkg.tar.zst
+  ```
+</details>
 
-   ```bash
-   nvm use
-   ```
+<details>
+  <summary><b>Other Platforms</b></summary>
 
-   You first might need to install the specific version and then use it:
+  You can also install the CLI via [go modules](https://go.dev/ref/mod#go-install) without the help of package managers.
 
-   ```bash
-   nvm install && nvm use
-   ```
+  ```sh
+  go install github.com/supabase/cli@latest
+  ```
 
-   You can install nvm from [here](https://github.com/nvm-sh/nvm).
+  Add a symlink to the binary in `$PATH` for easier access:
 
-   You also need to have pnpm installed, you can find the installation guide [here](https://pnpm.io/installation#using-npm)
+  ```sh
+  ln -s "$(go env GOPATH)/bin/cli" /usr/bin/supabase
+  ```
 
-4. Set up your `.env` file
+  This works on other non-standard Linux distros.
+</details>
 
-   - Go to `apps/dashboard` and `apps/api`.
-   - Duplicate the `.env.example` file and rename it to `.env`
-   - Populate your .env files with the neccessary variables
+<details>
+  <summary><b>Community Maintained Packages</b></summary>
 
-To get the environmental variables for supabase continue to step(5)
+  Available via [pkgx](https://pkgx.sh/). Package script [here](https://github.com/pkgxdev/pantry/blob/main/projects/supabase.com/cli/package.yml).
+  To install in your working directory:
 
-1. Install all dependencies
+  ```bash
+  pkgx install supabase
+  ```
 
-   ```bash
-   pnpm i
-   ```
+  Available via [Nixpkgs](https://nixos.org/). Package script [here](https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/supabase-cli/default.nix).
+</details>
 
-2. Setup Supabase.
+### Run the CLI
 
-   - Install and Start [docker](https://docs.docker.com/engine/install/)
-   - Install [Supabase CLI](https://supabase.com/docs/guides/local-development/cli/getting-started) on your computer
-   - Go to the project directory in your terminal and start Supabase
+```bash
+supabase bootstrap
+```
 
-     ```bash
-       supabase start
-     ```
+Or using npx:
 
-   - You should get a result like this
+```bash
+npx supabase bootstrap
+```
 
-     ```bash
-       supabase local development setup is running.
+The bootstrap command will guide you through the process of setting up a Supabase project using one of the [starter](https://github.com/supabase-community/supabase-samples/blob/main/samples.json) templates.
 
-         API URL: http://127.0.0.1:54321
-     GraphQL URL: http://127.0.0.1:54321/graphql/v1
-           DB URL: postgresql://postgres:postgres@127.0.0.1:54322/postgres
-       Studio URL: http://127.0.0.1:54323
-     Inbucket URL: http://127.0.0.1:54324
-       JWT secret: super-secret-jwt-token-with-at-least-32-characters-long
-         anon key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0
-     service_role key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU
-     ```
+## Docs
 
-   - Add Supabase environment variables into `app/dashboard` folder, which should be taken from the result of `supabase start`
+Command & config reference can be found [here](https://supabase.com/docs/reference/cli/about).
 
-     ```env
-       PUBLIC_SUPABASE_URL=<API URL>
-       PUBLIC_SUPABASE_ANON_KEY=<anon key>
-       PRIVATE_SUPABASE_SERVICE_ROLE=<service_role key>
-     ```
+## Breaking changes
 
-   - To view the Supabase studio, open the Studio URL from the result of `supabase start`
+We follow semantic versioning for changes that directly impact CLI commands, flags, and configurations.
 
-3. Run all projects (in development mode)
+However, due to dependencies on other service images, we cannot guarantee that schema migrations, seed.sql, and generated types will always work for the same CLI major version. If you need such guarantees, we encourage you to pin a specific version of CLI in package.json.
 
-   ```bash
-   pnpm dev
-   ```
+## Developing
 
-4. All projects should start running
+To run from source:
 
-   - `classroomio-com`: [http://localhost:5174](http://localhost:5174)
-   - `api`: [http://localhost:3002](http://localhost:3002)
-   - `dashboard`: [http://localhost:5173](http://localhost:5173)
-   - `docs`: [http://localhost:3000](http://localhost:3000)
-
-5. Running a specific project
-
-   - **classroomio-com**: `pnpm dev --filter=@cio/classroomio-com`
-   - **api**: `pnpm dev --filter=@cio/api`
-   - **dashboard**: `pnpm dev --filter=@cio/dashboard`
-   - **docs**: `pnpm dev --filter=@cio/docs`
-
-6.  Login into `dashboard`
-
-    - Visit [http://localhost:5173/login](http://localhost:5173/login)
-    - Enter email: `admin@test.com`
-    - Enter password: `123456`
-     
-    To learn more about how to login with a dummy account, [go here.](https://classroomio.com/docs/contributor-guides/demo-accounts)
+```sh
+# Go >= 1.22
+go run . help
+```
