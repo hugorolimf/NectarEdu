@@ -78,7 +78,7 @@
 
     const { id: group_id } = newGroup[0];
 
-    // 2. Create course with group_id (published by default for marketplace)
+    // 2. Create course with group_id (as draft, user will publish after adding details)
     const { data: newCourseData } = await supabase
       .from('course')
       .insert({
