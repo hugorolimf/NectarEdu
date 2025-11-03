@@ -30,9 +30,9 @@
     if (editMode) return;
 
     capturePosthogEvent('join_course', {
-      course_id: courseData.id,
-      course_title: courseData.title,
-      course_cost: courseData.cost,
+      course_id: courseData?.id,
+      course_title: courseData?.title,
+      course_cost: courseData?.cost,
       course_free: isFree
     });
     if (isFree) {
@@ -56,13 +56,13 @@
     return firstTutor?.profile?.email || '';
   }
 
-  $: setFormatter(courseData.currency);
+  $: setFormatter(courseData?.currency);
 
   $: discount = get(courseData, 'metadata.discount', 0);
   $: calculatedCost = calcCourseDiscount(
     discount,
-    courseData.cost || 0,
-    !!courseData.metadata.showDiscount
+    courseData?.cost || 0,
+    !!courseData?.metadata?.showDiscount
   );
   $: isFree = isCourseFree(calculatedCost);
   $: startCoursePayment && handleJoinCourse();
@@ -71,8 +71,8 @@
 <PaymentModal
   bind:open={openModal}
   paymentLink={get(courseData, 'metadata.paymentLink', '')}
-  courseName={courseData.title}
-  teacherEmail={getTeacherEmail(courseData.group)}
+  courseName={courseData?.title}
+  teacherEmail={getTeacherEmail(courseData?.group)}
 />
 
 <!-- Pricing Details -->
@@ -101,7 +101,7 @@
               <p class="text-sm font-light text-gray-500 dark:text-white">
                 {discount}% {$t('course.navItem.landing_page.pricing_section.discount')}.
                 <span class="line-through">
-                  {formatter?.format(courseData?.cost || 0) || courseData.cost}
+                  {formatter?.format(courseData?.cost || 0) || courseData?.cost}
                 </span>
               </p>
             {/if}
@@ -120,7 +120,7 @@
               : $t('course.navItem.landing_page.pricing_section.buy')}
             className="w-full sm:w-full h-[40px]"
             onClick={handleJoinCourse}
-            isDisabled={!courseData.metadata.allowNewStudent}
+            isDisabled={!courseData?.metadata?.allowNewStudent}
           />
         </div>
       </div>
@@ -167,9 +167,9 @@
             : $t('course.navItem.landing_page.pricing_section.buy')}
           className="w-full sm:w-full py-3 mb-3"
           onClick={handleJoinCourse}
-          isDisabled={!courseData.metadata.allowNewStudent}
+          isDisabled={!courseData?.metadata?.allowNewStudent}
         />
-        {#if courseData?.metadata?.showDiscount && courseData.metadata.allowNewStudent}
+        {#if courseData?.metadata?.showDiscount && courseData?.metadata?.allowNewStudent}
           <p class="text-sm font-light text-gray-500 dark:text-white">
             {$t('course.navItem.landing_page.pricing_section.bird')}
           </p>

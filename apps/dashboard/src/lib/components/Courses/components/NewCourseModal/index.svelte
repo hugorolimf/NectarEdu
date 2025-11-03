@@ -78,7 +78,7 @@
 
     const { id: group_id } = newGroup[0];
 
-    // 2. Create course with group_id
+    // 2. Create course with group_id (published by default for marketplace)
     const { data: newCourseData } = await supabase
       .from('course')
       .insert({
@@ -86,7 +86,9 @@
         description,
         type: type,
         version: COURSE_VERSION.V2,
-        group_id
+        group_id,
+        is_published: true,  // Auto-publish to marketplace
+        status: 'ACTIVE'
       })
       .select();
     console.log(`newCourse data`, newCourseData);
@@ -128,7 +130,8 @@
       });
     }
 
-    onClose(`/courses/${newCourse.id}`);
+    // Redirect to marketplace to show the new course
+    onClose(`/org/${$currentOrg.siteName}/marketplace`);
     isLoading = false;
   }
 

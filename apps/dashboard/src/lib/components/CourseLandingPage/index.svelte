@@ -59,8 +59,8 @@
   let instructor = {};
   let video: string | undefined;
 
-  const lessonSections = getLessonSections(courseData);
-  const totalLessons = getTotalLessons(lessonSections);
+  $: lessonSections = courseData ? getLessonSections(courseData) : [];
+  $: totalLessons = getTotalLessons(lessonSections);
 
   function locationHashChanged() {
     activeNav = window.location.hash;
@@ -293,7 +293,7 @@
         {/if}
 
         <!-- Sections - Lessons -->
-        {#if courseData.version === COURSE_VERSION.V1}
+        {#if courseData?.version === COURSE_VERSION.V1}
           <section id="lessons" class="border-b border-gray-300 mt-8 pb-10">
             <div class="flex items-center justify-between w-full mb-3">
               <h3 class="text-2xl font-bold mt-0 mb-3">
@@ -318,7 +318,7 @@
               {/each}
             </div>
           </section>
-        {:else if courseData.version === COURSE_VERSION.V2}
+        {:else if courseData?.version === COURSE_VERSION.V2}
           <section id="lessons">
             <!-- header -->
             <div class="flex items-center justify-between">
