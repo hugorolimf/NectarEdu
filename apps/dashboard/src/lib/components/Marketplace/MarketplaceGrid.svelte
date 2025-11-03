@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { Search, Dropdown, ButtonSet } from 'carbon-components-svelte';
   import MarketplaceCard from './MarketplaceCard.svelte';
-  import { fetchMarketplaceCourses, fetchMarketplaceCategories, type MarketplaceCourse, type MarketplaceFilters } from '$lib/utils/services/marketplace';
+  import { fetchMarketplaceCourses, fetchMarketplaceCategories, testSupabaseConnection, type MarketplaceCourse, type MarketplaceFilters } from '$lib/utils/services/marketplace';
   import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
   import { VARIANTS } from '$lib/components/PrimaryButton/constants';
   import { t } from '$lib/utils/functions/translations';
@@ -19,7 +19,7 @@
 
   let courses: MarketplaceCourse[] = [];
   let categories: { id: string; name: string; count: number }[] = [];
-  let isLoading = true;
+  let isLoading = false;
   let searchValue = '';
   let selectedCategory = 'all';
   let featuredOnly = false;
@@ -31,9 +31,15 @@
   const COURSES_PER_PAGE = 12;
 
   async function loadCourses(append = false) {
-    if (isLoading && !append) return;
+    console.log('🔄 loadCourses called:', { append, isLoading, hasMore });
+    
+    if (isLoading && !append) {
+      console.log('⏸️ Already loading, skipping...');
+      return;
+    }
 
     isLoading = true;
+    console.log('📊 Setting isLoading to true');
 
     const filters: MarketplaceFilters = {
       category: selectedCategory === 'all' ? undefined : selectedCategory,
@@ -42,40 +48,53 @@
       offset: append ? courses.length : 0
     };
 
+    console.log('🔍 Applying filters:', filters);
+
     try {
+      console.log('📡 Fetching courses...');
       const { data: newCourses, error } = await fetchMarketplaceCourses(filters);
 
+      console.log('📊 Fetch result:', { newCourses, error });
+
       if (error) {
-        console.error('Error loading courses:', error);
+        console.error('❌ Error loading courses:', error);
         return;
       }
 
       if (append) {
+        console.log(`➕ Appending ${newCourses.length} courses to existing ${courses.length}`);
         courses = [...courses, ...newCourses];
       } else {
+        console.log(`🔄 Setting ${newCourses.length} courses as new list`);
         courses = newCourses;
       }
 
       hasMore = newCourses.length === COURSES_PER_PAGE;
+      console.log('📈 Updated hasMore:', hasMore);
     } catch (err) {
-      console.error('Unexpected error:', err);
+      console.error('💥 Unexpected error in loadCourses:', err);
     } finally {
       isLoading = false;
+      console.log('✅ Setting isLoading to false');
     }
   }
 
   async function loadCategories() {
+    console.log('📂 Loading categories...');
     try {
       const { data: categoriesData, error } = await fetchMarketplaceCategories();
 
+      console.log('📊 Categories result:', { categoriesData, error });
+
       if (error) {
-        console.error('Error loading categories:', error);
+        console.error('❌ Error loading categories:', error);
         return;
       }
 
       categories = categoriesData || [];
+      console.log('✅ Categories loaded:', categories.length);
     } catch (err) {
-      console.error('Unexpected error:', err);
+      console.error('💥 Unexpected error loading categories:', err);
     }
   }
 
@@ -114,18 +133,37 @@
   }
 
   onMount(async () => {
+    console.log('🚀 MarketplaceGrid onMount started');
+    
+    // Pequeno delay para garantir que o componente esteja pronto
+    await new Promise(resolve => setTimeout(resolve, 100));
+    
+    // Testar conexão com Supabase primeiro
+    const isConnected = await testSupabaseConnection();
+    if (!isConnected) {
+      console.error('❌ Cannot connect to Supabase, marketplace will not work');
+      isLoading = false;
+      return;
+    }
+    
     // Load saved view preference
     if (browser) {
       const savedView = localStorage.getItem('marketplaceView') as 'grid' | 'list' | null;
       if (savedView) {
+        console.log('📁 Loaded saved view preference:', savedView);
         viewMode = savedView;
       }
     }
 
-    await Promise.all([
-      loadCategories(),
-      loadCourses()
-    ]);
+    console.log('🔄 Loading categories and courses sequentially...');
+    
+    // Carregar categorias primeiro
+    await loadCategories();
+    
+    // Depois carregar cursos
+    await loadCourses();
+    
+    console.log('✅ MarketplaceGrid onMount completed');
   });
 
   // Reactive search with debouncing
