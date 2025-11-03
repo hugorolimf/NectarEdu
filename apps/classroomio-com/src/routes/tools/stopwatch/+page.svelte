@@ -116,13 +116,13 @@
 </script>
 
 <svelte:head>
-  <title>Activity Stopwatch | ClassroomIO</title>
+  <title>Activity Stopwatch | NectarEDU</title>
   <meta
     property="og:image"
     itemprop="image"
     content="https://brand.cdn.clsrio.com/og/free-tools.png"
   />
-  <meta property="og:title" content="Activity Stopwatch | ClassroomIO" />
+  <meta property="og:title" content="Activity Stopwatch | NectarEDU" />
   <meta
     property="og:description"
     content="Stay on track with a customizable stopwatch for timed tasks, quizzes, and study sessions"
@@ -134,7 +134,7 @@
     content="https://brand.cdn.clsrio.com/og/free-tools.png"
   />
 
-  <meta name="twitter:title" content="Activity Stopwatch | ClassroomIO" />
+  <meta name="twitter:title" content="Activity Stopwatch | NectarEDU" />
   <meta
     name="twitter:description"
     content="Stay on track with a customizable stopwatch for timed tasks, quizzes, and study sessions"

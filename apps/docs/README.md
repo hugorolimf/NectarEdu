@@ -1,6 +1,6 @@
-# ClassroomIO Documentation
+# NectarEDU Documentation
 
-The help docs of classroomio in Next.js live on [https://classroomio.com/docs](https://classroomio.com/docs)
+The help docs of NectarEDU in Next.js live on [https://NectarEDU.com/docs](https://NectarEDU.com/docs)
 
 ## Development
 
@@ -9,13 +9,13 @@ The help docs of classroomio in Next.js live on [https://classroomio.com/docs](h
 1. Clone the repo
 
    ```bash
-   git clone https://github.com/rotimi-best/classroomio.git
+   git clone https://github.com/rotimi-best/NectarEDU.git
    ```
 
 2. Go to project folder
 
    ```bash
-   cd classroomio
+   cd NectarEDU
    ```
 
 3. Install the required dependencies

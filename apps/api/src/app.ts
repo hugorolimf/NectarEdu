@@ -31,7 +31,7 @@ export const app = new Hono()
   // Routes
   .get('/', (c) =>
     c.json({
-      message: '"Welcome to Classroomio.com API - docs are at https://api.classroomio.com/docs"'
+      message: '"Welcome to NectarEDU.com API - docs are at https://api.NectarEDU.com/docs"'
     })
   )
   .route('/course', courseRouter)
@@ -40,18 +40,18 @@ export const app = new Hono()
     try {
       const { email, token } = await c.req.json();
       console.log(`/POST api/email/verify_email ${email} ${token}`);
-      
+
       // For development, just return success
       // In production, this would validate the token and verify the email
-      return c.json({ 
-        success: true, 
-        message: 'Email verification successful' 
+      return c.json({
+        success: true,
+        message: 'Email verification successful'
       });
     } catch (error) {
       console.error('Email verification error:', error);
-      return c.json({ 
-        success: false, 
-        error: 'Email verification failed' 
+      return c.json({
+        success: false,
+        error: 'Email verification failed'
       }, 400);
     }
   })

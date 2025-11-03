@@ -83,7 +83,7 @@
 </script>
 
 <svelte:head>
-  <title>Ask the Community - ClassroomIO</title>
+  <title>Ask the Community - NectarEDU</title>
 </svelte:head>
 
 <section class="w-full md:mx-auto md:max-w-3xl">
@@ -96,7 +96,7 @@
       {$t('community.ask.go_back')}
     </a>
     <div class="flex items-center justify-between gap-12">
-      <h1 class="text-2xl font-bold dark:text-white md:text-3xl">{$t('community.ask.ask_the')}</h1>
+      <h1 class="text-2xl font-bold md:text-3xl dark:text-white">{$t('community.ask.ask_the')}</h1>
       <PrimaryButton
         label={$t('community.ask.publish')}
         variant={VARIANTS.CONTAINED_DARK}

@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-  <title>Blog | ClassroomIO</title>
+  <title>Blog | NectarEDU</title>
 </svelte:head>
 
 <section>
@@ -16,10 +16,10 @@
       class="mx-auto text-4xl md:text-7xl lg:text-6xl font-bold text-slate-900 flex flex-col items-center"
     >
       <span>What's new on</span>
-      <span class="text-blue-700 relative">ClassroomIO?</span>
+      <span class="text-blue-700 relative">NectarEDU?</span>
     </h1>
     <p class="w-[90%] md:w-[60%] text-center font-normal text-lg text-slate-700 mt-10 lg:mt-7">
-      Get the latest news from ClassroomIO, including product updates, team announcements and more!
+      Get the latest news from NectarEDU, including product updates, team announcements and more!
     </p>
   </PageHeader>
   <div class="w-full flex items-center justify-center">

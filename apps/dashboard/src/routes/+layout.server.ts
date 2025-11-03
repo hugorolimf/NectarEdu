@@ -109,7 +109,7 @@ export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
     response.org = (await getCurrentOrg(response.orgSiteName, true)) || null;
 
     if (!response.org && !isDev) {
-      throw redirect(307, 'https://app.classroomio.com/404?type=org');
+      throw redirect(307, 'https://app.NectarEDU.com/404?type=org');
     } else if (!response.org && _orgSiteName) {
       cookies.delete('_orgSiteName', { path: '/' });
     }
@@ -117,7 +117,7 @@ export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
     response.skipAuth = true;
   } else if (!APP_SUBDOMAINS.includes(subdomain) && !isDev) {
     // This case is for anything in our blockedSubdomains
-    throw redirect(307, 'https://app.classroomio.com');
+    throw redirect(307, 'https://app.NectarEDU.com');
   }
 
   return response;
@@ -128,7 +128,7 @@ function isURLCustomDomain(url: URL) {
     return false;
   }
 
-  const notCustomDomainHosts = [env.PRIVATE_APP_HOST || '', 'classroomio.com', 'vercel.app'].filter(
+  const notCustomDomainHosts = [env.PRIVATE_APP_HOST || '', 'NectarEDU.com', 'vercel.app'].filter(
     Boolean
   );
 
@@ -137,7 +137,7 @@ function isURLCustomDomain(url: URL) {
 
 function getBaseMetaTags(url: URL) {
   return Object.freeze({
-    title: 'ClassroomIO | The Open Source Learning Management System for Companies',
+    title: 'NectarEDU | The Open Source Learning Management System for Companies',
     description:
       'A flexible, user-friendly platform for creating, managing, and delivering courses for companies and training organisations',
     canonical: new URL(url.pathname, url.origin).href,
@@ -145,30 +145,30 @@ function getBaseMetaTags(url: URL) {
       type: 'website',
       url: new URL(url.pathname, url.origin).href,
       locale: 'en_IE',
-      title: 'ClassroomIO | The Open Source Learning Management System for Companies',
+      title: 'NectarEDU | The Open Source Learning Management System for Companies',
       description:
         'A flexible, user-friendly platform for creating, managing, and delivering courses for companies and training organisations',
-      siteName: 'ClassroomIO',
+      siteName: 'NectarEDU',
       images: [
         {
-          url: 'https://brand.cdn.clsrio.com/og/classroomio-og.png',
-          alt: 'ClassroomIO OG Image',
+          url: 'https://brand.cdn.clsrio.com/og/NectarEDU-og.png',
+          alt: 'NectarEDU OG Image',
           width: 1920,
           height: 1080,
-          secureUrl: 'https://brand.cdn.clsrio.com/og/classroomio-og.png',
+          secureUrl: 'https://brand.cdn.clsrio.com/og/NectarEDU-og.png',
           type: 'image/jpeg'
         }
       ]
     },
     twitter: {
-      handle: '@classroomio',
-      site: '@classroomio',
+      handle: '@NectarEDU',
+      site: '@NectarEDU',
       cardType: 'summary_large_image' as const,
-      title: 'ClassroomIO | The Open Source Learning Management System for Companies',
+      title: 'NectarEDU | The Open Source Learning Management System for Companies',
       description:
         'A flexible, user-friendly platform for creating, managing, and delivering courses for companies and training organisations',
-      image: 'https://brand.cdn.clsrio.com/og/classroomio-og.png',
-      imageAlt: 'ClassroomIO OG Image'
+      image: 'https://brand.cdn.clsrio.com/og/NectarEDU-og.png',
+      imageAlt: 'NectarEDU OG Image'
     }
   });
 }

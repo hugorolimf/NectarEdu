@@ -27,13 +27,13 @@ export const load = async ({ params = { slug: '' } }) => {
       ]
     },
     twitter: {
-      handle: '@classroomio',
-      site: '@classroomio',
+      handle: '@NectarEDU',
+      site: '@NectarEDU',
       cardType: 'summary_large_image' as const,
       title: data?.title,
       description: data?.description,
       image: data?.logo,
-      imageAlt: 'ClassroomIO OG Image'
+      imageAlt: 'NectarEDU OG Image'
     }
   }) satisfies MetaTagsProps;
 

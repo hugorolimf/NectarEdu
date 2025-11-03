@@ -107,7 +107,7 @@
   <div class="space-y-4 border-b py-3">
     <p class="text-xs font-semibold text-gray-500">{$t('profileMenu.free_tools')}</p>
     <a
-      href="https://classroomio.com/tools/progress"
+      href="https://NectarEDU.com/tools/progress"
       target="_blank"
       class="flex items-center gap-2"
       on:click={closeMenu}
@@ -116,7 +116,7 @@
       <p class="text-sm font-semibold">{$t('profileMenu.progress')}</p>
     </a>
     <a
-      href="https://classroomio.com/tools/activity-stopwatch"
+      href="https://NectarEDU.com/tools/activity-stopwatch"
       target="_blank"
       class=" flex items-center gap-2"
       on:click={closeMenu}
@@ -125,7 +125,7 @@
       <p class="text-sm font-semibold">{$t('profileMenu.timer')}</p>
     </a>
     <a
-      href="https://classroomio.com/tools/tic-tac-toe"
+      href="https://NectarEDU.com/tools/tic-tac-toe"
       target="_blank"
       class=" flex items-center gap-2"
       on:click={closeMenu}
@@ -134,7 +134,7 @@
       <p class="text-sm font-semibold">{$t('profileMenu.tic_tac')}</p>
     </a>
     <a
-      href="https://classroomio.com/tools"
+      href="https://NectarEDU.com/tools"
       on:click={closeMenu}
       target="_blank"
       class="ml-auto flex w-fit items-center justify-end"
@@ -148,7 +148,7 @@
   {#if !$globalStore.isOrgSite}
     <div class="space-y-4 border-b py-3">
       <a
-        href="https://classroomio.com/roadmap"
+        href="https://NectarEDU.com/roadmap"
         target="_blank"
         on:click={closeMenu}
         class="flex items-center gap-2 hover:no-underline"
@@ -157,7 +157,7 @@
         <p class="text-sm font-semibold">{$t('profileMenu.whats_new')}</p>
       </a>
       <a
-        href="https://classroomio.com/blog/launch-week"
+        href="https://NectarEDU.com/blog/launch-week"
         target="_blank"
         on:click={closeMenu}
         class="flex items-center gap-2 hover:no-underline"

@@ -9,7 +9,7 @@
   function handleEnroll(event: CustomEvent<{ courseId: string }>) {
     // Handle course enrollment
     const { courseId } = event.detail;
-    
+
     // For now, just navigate to the course page
     // In the future, this could open an enrollment modal
     goto(`/course/${courseId}`);
@@ -22,12 +22,12 @@
 </script>
 
 <svelte:head>
-  <title>Marketplace - ClassroomIO</title>
+  <title>Marketplace - NectarEDU</title>
   <meta name="description" content="Discover and enroll in courses from top instructors" />
 </svelte:head>
 
 <section class="w-full">
-  <div class="py-2 md:py-10 px-2 md:px-5">
+  <div class="px-2 py-2 md:px-5 md:py-10">
     <MarketplaceGrid on:enroll={handleEnroll} />
   </div>
 </section>

@@ -19,8 +19,12 @@
   import DeleteModal from '$lib/components/Modal/DeleteModal.svelte';
   import { deleteCourse } from '$lib/utils/services/courses';
   import { snackbar } from '$lib/components/Snackbar/store';
-  import { deleteCourseModal, deleteCourseModalInitialState, courses as coursesStore } from './store';
-  
+  import {
+    deleteCourseModal,
+    deleteCourseModalInitialState,
+    courses as coursesStore
+  } from './store';
+
   export let courses: Course[] = [];
   export let emptyTitle = $t('courses.course_card.empty_title');
   export let emptyDescription = $t('courses.course_card.empty_description');
@@ -41,19 +45,19 @@
 
     try {
       await deleteCourse($deleteCourseModal.id);
-      
+
       // Remove the course from the courses store
-      $coursesStore = $coursesStore.filter(course => course.id !== $deleteCourseModal.id);
-      
+      $coursesStore = $coursesStore.filter((course) => course.id !== $deleteCourseModal.id);
+
       // Show success message
       snackbar.success('snackbar.course_deleted');
-      
+
       // Close modal and reset state
       deleteCourseModal.set(deleteCourseModalInitialState);
     } catch (error) {
       console.error('Error deleting course:', error);
       snackbar.error('snackbar.course_settings.error.went_wrong');
-      
+
       // Stop deleting state on error
       $deleteCourseModal.isDeleting = false;
     }
@@ -61,8 +65,8 @@
 </script>
 
 <CopyCourseModal />
-<DeleteModal 
-  onDelete={handleDeleteCourse} 
+<DeleteModal
+  onDelete={handleDeleteCourse}
   bind:open={$deleteCourseModal.open}
   isLoading={$deleteCourseModal.isDeleting}
 />
@@ -120,7 +124,7 @@
           <Card
             id={courseData.id}
             slug={courseData.slug}
-            bannerImage={courseData.logo || '/images/classroomio-course-img-template.jpg'}
+            bannerImage={courseData.logo || '/images/NectarEDU-course-img-template.jpg'}
             title={courseData.title}
             description={courseData.description}
             isPublished={courseData.is_published}

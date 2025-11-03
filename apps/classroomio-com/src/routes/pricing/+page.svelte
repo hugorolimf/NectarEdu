@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-  <title>Pricing | ClassroomIO</title>
+  <title>Pricing | NectarEDU</title>
 </svelte:head>
 
 <section>
@@ -113,11 +113,14 @@
         </p>
 
         {#key isYearlyPlan}
-          <p class="mt-6 flex items-baseline gap-x-1 text-4xl font-medium text-white lg:text-4xl" in:fade>
+          <p
+            class="mt-6 flex items-baseline gap-x-1 text-4xl font-medium text-white lg:text-4xl"
+            in:fade
+          >
             ${isYearlyPlan ? PLANS.EARLY_ADOPTER.PRICE.YEARLY : PLANS.EARLY_ADOPTER.PRICE.MONTHLY}
           </p>
           <span class="text-base text-white" in:fade>
-            per {isYearlyPlan ? 'year': 'month'}
+            per {isYearlyPlan ? 'year' : 'month'}
           </span>
         {/key}
 
@@ -152,7 +155,7 @@
         <button
           class="text-base mt-10 w-full rounded-md bg-slate-900 py-3 font-medium text-white hover:bg-slate-700 lg:rounded-md lg:py-3 lg:text-lg lg:font-semibold"
           data-cal-config={"{'layout':'month_view'}"}
-          data-cal-link="classroomio/enterprise"
+          data-cal-link="NectarEDU/enterprise"
         >
           {PLANS.ENTERPRISE.CTA.LABEL}
         </button>

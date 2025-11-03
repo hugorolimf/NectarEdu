@@ -56,7 +56,7 @@
 
   async function setStars() {
     try {
-      const response = await fetch('https://api.github.com/repos/classroomio/classroomio');
+      const response = await fetch('https://api.github.com/repos/NectarEDU/NectarEDU');
       const data = await response.json();
       stars = data?.stargazers_count || 0;
     } catch (error) {
@@ -79,10 +79,10 @@
         width="28"
         height="28"
         src="/logo-512.png"
-        alt="classroomio logo"
+        alt="NectarEDU logo"
         class="w-6 md:w-10"
       />
-      <h1 class="text-xs md:text-lg font-medium ml-2">ClassroomIO</h1>
+      <h1 class="text-xs md:text-lg font-medium ml-2">NectarEDU</h1>
     </div>
   </a>
 
@@ -195,7 +195,7 @@
     </div>
     <a
       class="font-medium text-sm after:content-['→'] after:ml-2 hover:opacity-80 transition-opacity duration-200"
-      href="https://app.classroomio.com"
+      href="https://app.NectarEDU.com"
     >
       Dashboard
     </a>
@@ -222,7 +222,7 @@
           width="20"
           height="20"
           src="/logo-512.png"
-          alt="classroomio logo"
+          alt="NectarEDU logo"
           class="w-[15%]"
         />
         <button class="mr-5" on:click={handleShowSolutions}>
@@ -330,7 +330,7 @@
         </a>
         <a
           class="font-semibold after:content-['→'] rounded-md after:ml-2 w-full text-left py-4 px-4 hover:bg-gray-100 text-sm md:text-lg transition-all duration-200"
-          href="https://app.classroomio.com"
+          href="https://app.NectarEDU.com"
         >
           Dashboard
         </a>

@@ -9,12 +9,12 @@
       return goto('/');
     }
 
-    return goto('https://classroomio.com');
+    return goto('https://NectarEDU.com');
   }
 </script>
 
 <div class="{className} min-h-[80vh] flex items-center justify-center flex-col w-screen">
-  <img src="https://brand.cdn.clsrio.com/404.png" alt="classroomio_error_image" />
+  <img src="https://brand.cdn.clsrio.com/404.png" alt="NectarEDU_error_image" />
 
   <div class="flex flex-col items-center justify-center dark:text-white gap-3 w-4/5 lg:w-2/5">
     <p class="text-4xl dark:text-white font-semibold mb-5">

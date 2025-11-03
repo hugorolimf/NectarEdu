@@ -34,13 +34,13 @@
 
   function shareTemplate() {
     return encodeURIComponent(
-      `Learning Progress Update: ${$htmlBody.learning} and I'm ${$htmlBody.mood.text}. \nGenerated yours on classroomio.com\n`
+      `Learning Progress Update: ${$htmlBody.learning} and I'm ${$htmlBody.mood.text}. \nGenerated yours on NectarEDU.com\n`
     );
   }
 
   function shareOnTwitter() {
     const text = shareTemplate();
-    const hashtags = encodeURIComponent('classroomIO,progressReport');
+    const hashtags = encodeURIComponent('NectarEDU,progressReport');
     const url = `https://x.com/intent/post?text=${text}&hashtags=${hashtags}`;
     window.open(url);
   }
@@ -48,7 +48,7 @@
   function shareOnFacebook() {
     const text = shareTemplate();
     window.open(
-      `https://www.facebook.com/dialog/share?app_id=145634995501895&display=popup&href=https%3A%2F%2Fclassroomio.com%2Fdocs%2F&redirect_uri=https%3A%2F%2Fclassroomio.com%2Ftools%2Fexplorer&hashtag=${text}`
+      `https://www.facebook.com/dialog/share?app_id=145634995501895&display=popup&href=https%3A%2F%2FNectarEDU.com%2Fdocs%2F&redirect_uri=https%3A%2F%2FNectarEDU.com%2Ftools%2Fexplorer&hashtag=${text}`
     );
   }
 
@@ -64,13 +64,13 @@
 </script>
 
 <svelte:head>
-  <title>Random Name Picker | ClassroomIO</title>
+  <title>Random Name Picker | NectarEDU</title>
   <meta
     property="og:image"
     itemprop="image"
     content="https://brand.cdn.clsrio.com/og/free-tools.png"
   />
-  <meta property="og:title" content="Random Name Picker | ClassroomIO" />
+  <meta property="og:title" content="Random Name Picker | NectarEDU" />
   <meta
     property="og:description"
     content="Use this online name picker to draw a random name from a list of names for your online or physical classroom."
@@ -82,7 +82,7 @@
     content="https://brand.cdn.clsrio.com/og/free-tools.png"
   />
 
-  <meta name="twitter:title" content="Random Name Picker | ClassroomIO" />
+  <meta name="twitter:title" content="Random Name Picker | NectarEDU" />
   <meta
     name="twitter:description"
     content="Use this online name picker to draw a random name from a list of names for your online or physical classroom."

@@ -32,7 +32,7 @@ export interface MarketplaceFilters {
 
 export async function testSupabaseConnection() {
 	console.log('🔧 Testing Supabase connection...');
-	
+
 	try {
 		// Teste simples: verificar se conseguimos acessar a tabela marketplace_course
 		const { data, error } = await supabase
@@ -41,12 +41,12 @@ export async function testSupabaseConnection() {
 			.limit(1);
 
 		console.log('📊 Connection test result:', { data, error });
-		
+
 		if (error) {
 			console.error('❌ Supabase connection failed:', error);
 			return false;
 		}
-		
+
 		console.log('✅ Supabase connection successful');
 		return true;
 	} catch (err) {
@@ -57,7 +57,7 @@ export async function testSupabaseConnection() {
 
 export async function getMockCourses(): Promise<MarketplaceCourse[]> {
 	console.log('🎭 Using mock courses data');
-	
+
 	return [
 		{
 			id: 'mock-1',
@@ -77,7 +77,7 @@ export async function getMockCourses(): Promise<MarketplaceCourse[]> {
 			rating: 4.5,
 			review_count: 128,
 			enrollment_count: 2456,
-			organization_name: 'ClassroomIO Academy',
+			organization_name: 'NectarEDU Academy',
 			created_at: new Date().toISOString()
 		},
 		{
@@ -144,7 +144,7 @@ export async function fetchMarketplaceCourses(filters: MarketplaceFilters = {}) 
 
 		if (error) {
 			console.error('❌ RPC Error, trying fallback query:', error);
-			
+
 			// Fallback: consulta mais simples direta à tabela
 			console.log('🔄 Using simple fallback query...');
 			let query = supabase
@@ -167,10 +167,10 @@ export async function fetchMarketplaceCourses(filters: MarketplaceFilters = {}) 
 
 			if (fallbackError) {
 				console.error('❌ Fallback query also failed, using mock data:', fallbackError);
-				
+
 				// Último recurso: usar dados mockados
 				const mockData = await getMockCourses();
-				
+
 				// Aplicar filtros aos dados mockados
 				let filteredMockData = mockData;
 				if (category && category !== 'all') {
@@ -179,10 +179,10 @@ export async function fetchMarketplaceCourses(filters: MarketplaceFilters = {}) 
 				if (featured !== undefined) {
 					filteredMockData = filteredMockData.filter(course => course.featured === featured);
 				}
-				
+
 				// Aplicar paginação
 				const paginatedMockData = filteredMockData.slice(offset, offset + limit);
-				
+
 				console.log('🎭 Using mock data:', paginatedMockData.length, 'courses');
 				return { data: paginatedMockData, error: null };
 			}
@@ -208,7 +208,7 @@ export async function fetchMarketplaceCourses(filters: MarketplaceFilters = {}) 
 		return { data: courses || [], error: null };
 	} catch (err) {
 		console.error('💥 Unexpected error in fetchMarketplaceCourses, using mock data:', err);
-		
+
 		// Em caso de erro geral, retornar dados mockados
 		const mockData = await getMockCourses();
 		const paginatedMockData = mockData.slice(offset, offset + limit);

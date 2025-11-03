@@ -13,7 +13,12 @@
           "description": "Learn React.js from industry experts at Hype180",
           "url": "https://courseapp.oncws.com",
           "appUrl": "https://courseapp.oncws.com",
-          "keywords": ["react.js", "javascript", "web development", "coding bootcamp"],
+          "keywords": [
+            "react.js",
+            "javascript",
+            "web development",
+            "coding bootcamp"
+          ],
           "logo": "/logo.svg"
         }
       },
@@ -28,17 +33,17 @@
             },
             {
               "title": "Blog",
-              "link": "https://classroomio.com/blog",
+              "link": "https://NectarEDU.com/blog",
               "redirect": true
             },
             {
               "title": "API",
-              "link": "https://classroomio.com/docs",
+              "link": "https://NectarEDU.com/docs",
               "redirect": true
             },
             {
               "title": "Docs",
-              "link": "https://classroomio.com/docs",
+              "link": "https://NectarEDU.com/docs",
               "redirect": true
             }
           ]
@@ -49,8 +54,14 @@
         "show": true,
         "settings": {
           "links": [
-            { "label": "Privacy Policy", "url": "/privacy" },
-            { "label": "Terms of Service", "url": "/terms" }
+            {
+              "label": "Privacy Policy",
+              "url": "/privacy"
+            },
+            {
+              "label": "Terms of Service",
+              "url": "/terms"
+            }
           ],
           "facebook": "#",
           "instagram": "#",

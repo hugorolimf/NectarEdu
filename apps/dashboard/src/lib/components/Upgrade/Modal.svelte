@@ -81,7 +81,7 @@
   }
 
   function onLearnMore() {
-    window.open('https://classroomio.com/blog/early-adopter', '_blank');
+    window.open('https://NectarEDU.com/blog/early-adopter', '_blank');
   }
   function toggleIsYearlyPlan() {
     isYearlyPlan = !isYearlyPlan;
@@ -173,7 +173,7 @@
             <p
               class="mb-2 text-lg font-semibold leading-8 {planName === 'EARLY_ADOPTER'
                 ? 'text-white'
-                : 'text-gray-900'} dark:text-white lg:text-xl"
+                : 'text-gray-900'} lg:text-xl dark:text-white"
             >
               {PLANS[planName].NAME}
             </p>
@@ -189,7 +189,7 @@
             <p
               class=" mt-4 text-sm font-light leading-6 {planName === 'EARLY_ADOPTER'
                 ? 'text-white'
-                : 'text-black'} dark:text-gray-300 lg:leading-6"
+                : 'text-black'} lg:leading-6 dark:text-gray-300"
             >
               {PLANS[planName].DESCRIPTION}
             </p>

@@ -13,7 +13,7 @@
     {
       id: FORM_TYPE.BUG,
       title: '🐜  I want to report a bug',
-      to: 'https://github.com/classroomio/classroomio/issues/new?assignees=&labels=bug&projects=&template=bug-report.yml'
+      to: 'https://github.com/NectarEDU/NectarEDU/issues/new?assignees=&labels=bug&projects=&template=bug-report.yml'
     },
     {
       id: FORM_TYPE.HELP,
@@ -22,7 +22,7 @@
     {
       id: FORM_TYPE.FEATURE,
       title: '📮  I want to request a feature',
-      to: 'https://github.com/classroomio/classroomio/issues/new?assignees=&labels=&projects=&template=feature-request.yml'
+      to: 'https://github.com/NectarEDU/NectarEDU/issues/new?assignees=&labels=&projects=&template=feature-request.yml'
     },
     {
       id: FORM_TYPE.FEEDBACK,
@@ -40,7 +40,7 @@
 </script>
 
 <svelte:head>
-  <title>Contact us | ClassroomIO</title>
+  <title>Contact us | NectarEDU</title>
 </svelte:head>
 
 <section>
@@ -62,7 +62,7 @@
       class="w-[90%] md:w-[60%] max-w-3xl text-center font-normal text-lg text-slate-700 mt-10 lg:mt-7"
     >
       Report any bugs you encounter, request new features you'd like to see, or ask any questions
-      you have about ClassroomIO
+      you have about NectarEDU
     </p>
   </PageHeader>
 

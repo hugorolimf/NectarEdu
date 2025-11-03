@@ -1,6 +1,6 @@
 # Docker Usage Guide
 
-This directory contains all Docker-related files for the ClassroomIO project.
+This directory contains all Docker-related files for the NectarEDU project.
 
 ## 📁 Directory Structure
 
@@ -86,13 +86,13 @@ Required variables are listed in `docker-compose.yaml`.
 
 ## 🔗 Published Images
 
-- **API**: `classroomio/api` or `classroomio/api`
-- **Dashboard**: `classroomio/dashboard` or `classroomio/dashboard`
+- **API**: `NectarEDU/api` or `NectarEDU/api`
+- **Dashboard**: `NectarEDU/dashboard` or `NectarEDU/dashboard`
 
 Pull from Docker Hub:
 ```bash
-docker pull classroomio/api:latest
-docker pull classroomio/dashboard:latest
+docker pull NectarEDU/api:latest
+docker pull NectarEDU/dashboard:latest
 ```
 
 ## 💡 Tips

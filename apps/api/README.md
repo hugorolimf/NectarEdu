@@ -1,4 +1,4 @@
-# ClassroomIO Backend
+# NectarEDU Backend
 
 ## Supported Features
 

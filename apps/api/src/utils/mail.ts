@@ -3,7 +3,7 @@ interface FromData {
   email: string;
 }
 
-// format: "ClassroomIO Developers (via ClassroomIO.com)" <notify@mail.classroomio.com>
+// format: "NectarEDU Developers (via NectarEDU.com)" <notify@mail.NectarEDU.com>
 export function extractNameAndEmail(str: string): FromData | undefined {
   // Use regular expressions to match the name and email
   const regex = /"(.*?)"\s+<\s*(.*?)@(.*?)\s*>/;
@@ -160,8 +160,8 @@ export const withEmailTemplate = (content: string): string =>
       color: #1e293b;
     ">
   <div class="gutter">
-    <a href="https://classroomio.com" target="_blank">
-      <img src="https://brand.cdn.clsrio.com/cio-bg-transparent.png" alt="ClassroomIO Logo" /></a>
+    <a href="https://NectarEDU.com" target="_blank">
+      <img src="https://brand.cdn.clsrio.com/cio-bg-transparent.png" alt="NectarEDU Logo" /></a>
   </div>
   <div class="wrap" style="
         background-color: #fff;
@@ -184,21 +184,21 @@ export const withEmailTemplate = (content: string): string =>
     <table class="socialicons">
       <tr>
         <td>
-          <a target="_blank" href="https://twitter.com/classroomio"><img title="X"
+          <a target="_blank" href="https://twitter.com/NectarEDU"><img title="X"
               src="https://brand.cdn.clsrio.com/socials/twitter.png" alt="X" width="19" /></a>
         </td>
         <td>
-          <a target="_blank" href="https://www.youtube.com/@ClassroomIO"><img title="Youtube"
+          <a target="_blank" href="https://www.youtube.com/@NectarEDU"><img title="Youtube"
               src="https://brand.cdn.clsrio.com/socials/youtube.png" alt="Youtube" width="24" /></a>
         </td>
         <td>
-          <a target="_blank" href="https://www.facebook.com/classroomiohq"><img title="Facebook"
+          <a target="_blank" href="https://www.facebook.com/NectarEDUhq"><img title="Facebook"
               src="https://brand.cdn.clsrio.com/socials/facebook.png" alt="Facebook" width="24" /></a>
         </td>
       </tr>
     </table>
     <p style="padding-top: 8px; line-height: initial">
-      ClassroomIO ${new Date().getFullYear()}. All rights reserved.<br />
+      NectarEDU ${new Date().getFullYear()}. All rights reserved.<br />
       <a style="text-decoration: none" href="https://app.enzuzo.com/policies/tos/958fc978-5477-11ee-a03b-7b111830c594"
         target="_blank">Terms</a>
       |

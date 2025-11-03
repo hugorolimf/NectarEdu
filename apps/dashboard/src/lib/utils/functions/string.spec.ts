@@ -22,7 +22,7 @@ describe('capitalize first letter', () => {
   });
 
   test('should return the first letter of the first word capitalized when given a sentence', () => {
-    const result = capitalizeFirstLetter('classroomio is an open source project');
-    expect(result).toEqual('Classroomio is an open source project');
+    const result = capitalizeFirstLetter('NectarEDU is an open source project');
+    expect(result).toEqual('NectarEDU is an open source project');
   });
 });

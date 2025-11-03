@@ -14,9 +14,9 @@ export async function POST({ request }) {
     return json({ success: false, message: 'Missing fields' }, { status: 400 });
   }
 
-  if (params?.domain?.includes('classroomio.com')) {
+  if (params?.domain?.includes('NectarEDU.com')) {
     return json(
-      { success: false, message: 'Domain cannot contain classroomio.com' },
+      { success: false, message: 'Domain cannot contain NectarEDU.com' },
       { status: 400 }
     );
   }

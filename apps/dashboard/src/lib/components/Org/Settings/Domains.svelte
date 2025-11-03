@@ -89,8 +89,8 @@
       return;
     }
 
-    if (sanitizedDomain.includes('classroomio.com')) {
-      errors.customDomain = $t('components.settings.domains.custom_domain_not_classroomio');
+    if (sanitizedDomain.includes('NectarEDU.com')) {
+      errors.customDomain = $t('components.settings.domains.custom_domain_not_NectarEDU');
       return;
     }
 
@@ -224,7 +224,7 @@
         <!-- Org Site Name -->
         <TextField
           label="URL"
-          helperMessage={`https://${siteName || ''}.classroomio.com`}
+          helperMessage={`https://${siteName || ''}.NectarEDU.com`}
           bind:value={siteName}
           type="text"
           placeholder="e.g traversymedia"

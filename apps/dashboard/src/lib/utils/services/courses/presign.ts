@@ -5,7 +5,7 @@ import {
 } from '$lib/components/Course/components/Lesson/store/lessons';
 
 import axios from 'axios';
-import { classroomio } from '$lib/utils/services/api';
+import { NectarEDU } from '$lib/utils/services/api';
 
 export type UploadType = 'document' | 'video' | 'generic';
 
@@ -23,8 +23,8 @@ export class GenericUploader {
   async getDownloadPresignedUrl(keys: string[], type = this.uploadType) {
     const endpoint =
       type === 'document'
-        ? classroomio.course.presign.document.download
-        : classroomio.course.presign.video.download;
+        ? NectarEDU.course.presign.document.download
+        : NectarEDU.course.presign.video.download;
 
     const response = await endpoint.$post({
       json: {
@@ -61,8 +61,8 @@ export class GenericUploader {
   async getPresignedUrl(file: File) {
     const endpoint =
       this.uploadType === 'document'
-        ? classroomio.course.presign.document.upload
-        : classroomio.course.presign.video.upload;
+        ? NectarEDU.course.presign.document.upload
+        : NectarEDU.course.presign.video.upload;
 
     const response = await endpoint.$post({
       json: {

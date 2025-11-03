@@ -77,13 +77,13 @@
 </script>
 
 <svelte:head>
-  <title>Tic Tac Toe | ClassroomIO</title>
+  <title>Tic Tac Toe | NectarEDU</title>
   <meta
     property="og:image"
     itemprop="image"
     content="https://brand.cdn.clsrio.com/og/free-tools.png"
   />
-  <meta property="og:title" content="Tic Tac Toe | ClassroomIO" />
+  <meta property="og:title" content="Tic Tac Toe | NectarEDU" />
   <meta
     property="og:description"
     content="A simple and free tic tac toe game to play to your friends in class or outside the classroom."
@@ -95,7 +95,7 @@
     content="https://brand.cdn.clsrio.com/og/free-tools.png"
   />
 
-  <meta name="twitter:title" content="Tic Tac Toe | ClassroomIO" />
+  <meta name="twitter:title" content="Tic Tac Toe | NectarEDU" />
   <meta
     name="twitter:description"
     content="A simple and free tic tac toe game to play to your friends in class or outside the classroom."

@@ -22,9 +22,9 @@
         <div class="text-base leading-snug text-center">
           <span class="font-bold opacity-50 text-4xl">“</span>
           <span class="text-gray-800" style="font-size: 17px;"
-            >ClassroomIO really helped me bootstrap my program. The dashboard is extremely
-            intuitive. I could navigate most of it without any help / support. Coming from framer, I
-            can honestly say that I am extremely greatful that I found ClassroomIO.</span
+            >NectarEDU really helped me bootstrap my program. The dashboard is extremely intuitive.
+            I could navigate most of it without any help / support. Coming from framer, I can
+            honestly say that I am extremely greatful that I found NectarEDU.</span
           > <span class="font-bold opacity-50 inline-block text-4xl">”</span>
         </div>
         <div class="mx-auto flex items-center gap-2 justify-center">
@@ -48,7 +48,7 @@
   id="coursemanagement"
   tagline="Simplified"
   title="Course Management"
-  description="ClassroomIO simplifies teaching tasks, boosts the educational experience, and is beneficial for both educators and students, providing a user-friendly platform for assessment, grading, attendance, and scorebook management."
+  description="NectarEDU simplifies teaching tasks, boosts the educational experience, and is beneficial for both educators and students, providing a user-friendly platform for assessment, grading, attendance, and scorebook management."
   video="https://brand.cdn.clsrio.com/course-management.mp4"
   rightToLeft={true}
 />
@@ -56,7 +56,7 @@
   id="ai"
   tagline="Efficient"
   title="AI Support"
-  description="Our platform integrates AI to simplify lesson outline generation, streamline lesson planning and spark creative ideas. With ClassroomIO, educators can focus on what matters most: teaching."
+  description="Our platform integrates AI to simplify lesson outline generation, streamline lesson planning and spark creative ideas. With NectarEDU, educators can focus on what matters most: teaching."
   rightToLeft={false}
   video="https://brand.cdn.clsrio.com/ai-lesson.mp4"
 />
@@ -64,7 +64,7 @@
   id="customization"
   tagline="Flexible"
   title="Dashboard Customization"
-  description="ClassroomIO offers organizations the ability to tailor our LMS to their specific requirements. With our customizable features, you can create a personalized learning environment that aligns with your organization's goals"
+  description="NectarEDU offers organizations the ability to tailor our LMS to their specific requirements. With our customizable features, you can create a personalized learning environment that aligns with your organization's goals"
   rightToLeft={true}
   video="https://brand.cdn.clsrio.com/lms-customization.mp4"
 />

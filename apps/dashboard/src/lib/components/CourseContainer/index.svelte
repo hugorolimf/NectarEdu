@@ -66,7 +66,7 @@
 </script>
 
 <svelte:head>
-  <title>{$course.title || 'ClassroomIO Course'}</title>
+  <title>{$course.title || 'NectarEDU Course'}</title>
 </svelte:head>
 
 {#if isFetching}

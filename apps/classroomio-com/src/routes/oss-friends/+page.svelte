@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-  <title>Our Open-source Friends | ClassroomIO</title>
+  <title>Our Open-source Friends | NectarEDU</title>
 </svelte:head>
 
 <section>
@@ -16,8 +16,8 @@
       Our <span class="text-blue-700">Open-source</span> Friends
     </h1>
     <p class="w-[90%] md:w-[60%] text-center font-normal text-lg text-slate-700 mt-10 lg:mt-7">
-      In ClassroomIO, we are committed to building a commercial open source company and here are
-      some of our friends on the same mission.
+      In NectarEDU, we are committed to building a commercial open source company and here are some
+      of our friends on the same mission.
     </p>
   </PageHeader>
 

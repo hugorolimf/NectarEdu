@@ -70,7 +70,7 @@
 </script>
 
 <svelte:head>
-  <title>Bootcamps | ClassroomIO</title>
+  <title>Bootcamps | NectarEDU</title>
 </svelte:head>
 
 <section class="flex flex-col justify-center items-center">
@@ -95,7 +95,7 @@
           <span class="text-blue-700 relative"> growing bootcamps</span>
         </h1>
         <p class="lg:w-[60%] text-base md:text-lg lg:text-center font-normal text-slate-700">
-          From AI powered course creation to student collaboration tools, ClassroomIO provides
+          From AI powered course creation to student collaboration tools, NectarEDU provides
           everything you need to run a cutting-edge, high-impact bootcamp.
         </p>
       </div>
@@ -123,7 +123,7 @@
       >
         <h1 class="text-3xl md:text-5xl font-bold">Inspire Student Success</h1>
         <p class="text-[#334155] text-sm md:text-base font-light lg:text-center md:w-[80%]">
-          Scale your bootcamp with ClassroomIO's comprehensive toolkit. Create engaging content,
+          Scale your bootcamp with NectarEDU's comprehensive toolkit. Create engaging content,
           foster community, and drive student achievement.
         </p>
       </div>
@@ -217,7 +217,7 @@
               <button
                 class="py-4 px-8 border border-[#1D4ED8] outline-transparent rounded text-[#1D4ED8] text-sm font-semibold"
                 data-cal-config="'layout':'month_view'"
-                data-cal-link="classroomio/demo"
+                data-cal-link="NectarEDU/demo"
               >
                 Book a Demo
               </button>

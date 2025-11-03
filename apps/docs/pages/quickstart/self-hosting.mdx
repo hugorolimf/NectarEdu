@@ -1,18 +1,18 @@
 import Image from 'next/image';
 import { Callout } from 'nextra/components';
-import SelfhostClassroomIO from './images/selfhost-classroomio.webp';
+import SelfhostNectarEDU from './images/selfhost-NectarEDU.webp';
 
-# Self-hosting ClassroomIO.com
+# Self-hosting NectarEDU.com
 
-This guide will help you quickly selfhost ClassroomIO
+This guide will help you quickly selfhost NectarEDU
 
-<Image src={SelfhostClassroomIO} alt="Selfhost ClassroomIO" quality="100" />
+<Image src={SelfhostNectarEDU} alt="Selfhost NectarEDU" quality="100" />
 
-ClassroomIO is made up of the following applications
+NectarEDU is made up of the following applications
 
-- [apps/api](https://github.com/rotimi-best/classroomio/tree/main/apps/api) - an Express server
-- [apps/dashboard](https://github.com/rotimi-best/classroomio/tree/main/apps/dashboard) - the admin dashboard + LMS
-- [supabase](https://github.com/rotimi-best/classroomio/tree/main/supabase) - the database + REST API.
+- [apps/api](https://github.com/rotimi-best/NectarEDU/tree/main/apps/api) - an Express server
+- [apps/dashboard](https://github.com/rotimi-best/NectarEDU/tree/main/apps/dashboard) - the admin dashboard + LMS
+- [supabase](https://github.com/rotimi-best/NectarEDU/tree/main/supabase) - the database + REST API.
 
 The quickest and easiest way to deploy both the api and dashboard is by using our [Railway Template](https://railway.app/template/dl9RG7?referralCode=8OyIj5). However there are a couple of things that you'd need first before heading over to the template, which are:
 
@@ -43,7 +43,7 @@ Make sure you have them handy because you'd need them while we go through this s
 
 There are 2 options to go about setting up Supabase, you could [selfhost supabase](https://supabase.com/docs/guides/self-hosting) on your own servers or you could use their cloud version. We recommend you use the cloud version because it has a very generous free tier and you get to deploy it very quickly.
 
-We have a standalone guide to help you setup your Supabase Cloud and you can find it [here](https://classroomio.com/docs/contributor-guides/supabase-cloud)
+We have a standalone guide to help you setup your Supabase Cloud and you can find it [here](https://NectarEDU.com/docs/contributor-guides/supabase-cloud)
 
 After you go through that guide you will need the following environment variables, please also store them somewhere:
 
@@ -94,7 +94,7 @@ SENTRY_DNS=""
 
 <Callout type="info" emoji="ℹ️">
   Learn more about the environment variables
-  [here](https://github.com/rotimi-best/classroomio/blob/main/apps/api/.env.example)
+  [here](https://github.com/rotimi-best/NectarEDU/blob/main/apps/api/.env.example)
 </Callout>
 
 #### cio-dashboard
@@ -116,7 +116,7 @@ PRIVATE_APP_SUBDOMAINS=""
 
 <Callout type="info" emoji="ℹ️">
   Learn more about the environment variables
-  [here](https://github.com/rotimi-best/classroomio/blob/main/apps/dashboard/.env.example)
+  [here](https://github.com/rotimi-best/NectarEDU/blob/main/apps/dashboard/.env.example)
 </Callout>
 
 ## Using Docker
@@ -126,8 +126,8 @@ We provide a docker-compose configuration to deploy both the api and dashboard s
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/rotimi-best/classroomio.git
-cd classroomio
+git clone https://github.com/rotimi-best/NectarEDU.git
+cd NectarEDU
 ```
 
 2. Create a `.env` file with your environment variables (see Environment Variables section above)

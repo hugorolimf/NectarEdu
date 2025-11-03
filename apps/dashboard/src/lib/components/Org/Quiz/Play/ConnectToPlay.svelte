@@ -32,10 +32,10 @@
     <PlayHeader startCount={true} showCountDown={true} />
   </div>
 
-  <div slot="body" class="w-full rounded-md bg-white dark:bg-neutral-800 py-7 px-5">
+  <div slot="body" class="w-full rounded-md bg-white px-5 py-7 dark:bg-neutral-800">
     <div class="mb-3">
       <p>1. Visit</p>
-      <h3>play.classroomio.com</h3>
+      <h3>play.NectarEDU.com</h3>
     </div>
     <div class="">
       <p>2. Enter Pin</p>
@@ -47,8 +47,8 @@
     </div>
   </div>
 
-  <div slot="footer" class="flex justify-center items-center">
-    <p class="font-bold mr-3">Let's go</p>
+  <div slot="footer" class="flex items-center justify-center">
+    <p class="mr-3 font-bold">Let's go</p>
     <PrimaryButton label="View Players" variant={VARIANTS.OUTLINED} onClick={goToPlayersStep} />
   </div>
 </PlayContainer>

@@ -50,9 +50,9 @@
   function filterCourses(searchValue: string, _selectedId: string, courses: Course[]) {
     if (browser) {
       if (!selectedId) {
-        selectedId = localStorage.getItem('classroomio_filter_course_key') || '0';
+        selectedId = localStorage.getItem('NectarEDU_filter_course_key') || '0';
       } else {
-        localStorage.setItem('classroomio_filter_course_key', _selectedId);
+        localStorage.setItem('NectarEDU_filter_course_key', _selectedId);
       }
     }
 
@@ -97,13 +97,13 @@
 </script>
 
 <svelte:head>
-  <title>Courses - ClassroomIO</title>
+  <title>Courses - NectarEDU</title>
 </svelte:head>
 
-<section class="w-full md:max-w-6xl md:mx-auto">
-  <div class="py-2 md:py-10 px-2 md:px-5">
-    <div class="flex items-center justify-between mb-5">
-      <h1 class="dark:text-white text-2xl md:text-3xl font-bold">{$t('courses.heading')}</h1>
+<section class="w-full md:mx-auto md:max-w-6xl">
+  <div class="px-2 py-2 md:px-5 md:py-10">
+    <div class="mb-5 flex items-center justify-between">
+      <h1 class="text-2xl font-bold md:text-3xl dark:text-white">{$t('courses.heading')}</h1>
       {#if $isMobile}
         <PrimaryButton isDisabled={!$isOrgAdmin} onClick={openNewCourseModal}>
           <Add size={24} />
@@ -117,7 +117,7 @@
         />
       {/if}
     </div>
-    <div class="flex flex-row-reverse mb-5">
+    <div class="mb-5 flex flex-row-reverse">
       <div class="filter-containter flex items-end justify-start">
         <Search
           placeholder={$t('courses.search_placeholder')}

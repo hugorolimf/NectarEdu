@@ -78,22 +78,22 @@
 </script>
 
 <svelte:head>
-  <title>Ask the Community - ClassroomIO</title>
+  <title>Ask the Community - NectarEDU</title>
 </svelte:head>
 
-<section class="w-full max-w-3xl mx-auto">
+<section class="mx-auto w-full max-w-3xl">
   <div class="p-5">
-    <a class="text-gray-500 dark:text-white text-md flex items-center" href={`/lms/community`}>
+    <a class="text-md flex items-center text-gray-500 dark:text-white" href={`/lms/community`}>
       <ArrowLeftIcon size={24} class="carbon-icon dark:text-white" />
       {$t('community.ask.go_back')}
     </a>
     <div class="flex items-center justify-between">
-      <h1 class="dark:text-white text-3xl font-bold">{$t('community.ask.ask_the')}</h1>
+      <h1 class="text-3xl font-bold dark:text-white">{$t('community.ask.ask_the')}</h1>
       <PrimaryButton label={$t('community.ask.publish')} onClick={handleSave} />
     </div>
   </div>
 
-  <div class="mb-3 p-2 flex gap-x-5 justify-between">
+  <div class="mb-3 flex justify-between gap-x-5 p-2">
     <TextField
       bind:value={fields.title}
       placeholder={$t('community.ask.title')}
@@ -101,7 +101,7 @@
       className="w-[75%]"
     />
     <Dropdown
-      class="w-[25%] h-full"
+      class="h-full w-[25%]"
       size="xl"
       label={$t('community.ask.select_course')}
       invalid={!!errors.courseId}

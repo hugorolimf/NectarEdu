@@ -51,7 +51,7 @@
 </script>
 
 <svelte:head>
-  <title>Join ClassroomIO</title>
+  <title>Join NectarEdu</title>
 </svelte:head>
 
 <AuthUI

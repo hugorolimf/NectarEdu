@@ -23,7 +23,7 @@
   }
 
   function onClick(org: CurrentOrg) {
-    localStorage.setItem('classroomio_org_sitename', org.siteName);
+    localStorage.setItem('NectarEDU_org_sitename', org.siteName);
     currentOrg.set(org);
 
     setTheme(org.theme);
@@ -34,12 +34,12 @@
 </script>
 
 <div
-  class="org-selector px-4 py-3 border border-l-0 border-r-0 border-t-0 border-gray-200 dark:border-neutral-600 relative"
+  class="org-selector relative border border-l-0 border-r-0 border-t-0 border-gray-200 px-4 py-3 dark:border-neutral-600"
   data-outline
 >
   {#if $currentOrg.name}
     <button
-      class="flex items-center gap-2 w-full"
+      class="flex w-full items-center gap-2"
       on:click={(e) => {
         e.stopPropagation();
         open = !open;
@@ -60,9 +60,9 @@
           className="bg-primary-200 dark:text-black font-medium"
         />
       {/if}
-      <div class="flex items-center cursor-pointer max-w-[219px] justify-between w-full">
+      <div class="flex w-full max-w-[219px] cursor-pointer items-center justify-between">
         <div class="flex flex-col items-start">
-          <p class="dark:text-white text-sm font-medium whitespace-nowrap truncate mb-1">
+          <p class="mb-1 truncate whitespace-nowrap text-sm font-medium dark:text-white">
             {$currentOrg.name}
           </p>
 
@@ -72,13 +72,13 @@
       </div>
     </button>
   {:else}
-    <div class="w-[219px] h-[30px]">
+    <div class="h-[30px] w-[219px]">
       <SkeletonText style="width: 100%; height: 100%;" />
     </div>
   {/if}
 
   {#if canAddOrg}
-    <Popover class="w-[95%] left-[2%] rounded-md" bind:open closeOnOutsideClick align="bottom-left">
+    <Popover class="left-[2%] w-[95%] rounded-md" bind:open closeOnOutsideClick align="bottom-left">
       {#each $orgs as org}
         <OrgSelectorItem
           size="sm"

@@ -25,7 +25,7 @@
 
     const params = new URLSearchParams(window.location.search);
     console.log({ params });
-    // const redirectTo = `https://app.classroomio.com?forwardTo=${
+    // const redirectTo = `https://app.NectarEDU.com?forwardTo=${
     //   window.location.origin + params.get('redirect')
     // }`;
     const pathname = redirectPathname || params.get('redirect');
@@ -57,7 +57,7 @@
         <div class="flex w-full flex-col items-center justify-center pt-2">
           <Avatar
             src={$currentOrg.avatar_url ? $currentOrg.avatar_url : '/logo-192.png'}
-            name={$currentOrg.name ? $currentOrg.name : 'ClassroomIO'}
+            name={$currentOrg.name ? $currentOrg.name : 'NectarEDU'}
             shape="rounded-md"
             width="w-10"
             height="max-h-10"
@@ -65,7 +65,7 @@
           />
           <a href="/">
             <h4 class="mt-0 text-xl dark:text-white">
-              {$currentOrg.name ? $currentOrg.name : 'ClassroomIO'}
+              {$currentOrg.name ? $currentOrg.name : 'NectarEDU'}
             </h4>
           </a>
         </div>

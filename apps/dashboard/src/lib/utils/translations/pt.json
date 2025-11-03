@@ -1023,7 +1023,7 @@
         "remove": "Remover",
         "custom_favicon": "Favicon personalizado",
         "custom_code": "Código personalizado",
-        "custom_domain_not_classroomio": "O domínio não pode conter 'classroomio'"
+        "custom_domain_not_NectarEDU": "O domínio não pode conter 'NectarEDU'"
       },
       "customize-lms": {
         "title": "Personalizar LMS",
@@ -1116,12 +1116,12 @@
     "goto": "Vá para",
     "courses": "Cursos",
     "home": "Lar",
-    "classroomio_home": "Página inicial do ClassroomIO",
+    "NectarEDU_home": "Página inicial do NectarEDU",
     "dashboard": "Painel",
     "discussion": "Discussão",
     "people": "Pessoas",
     "goto_lms": "Acesse o LMS",
-    "goto_home": "Vá para a página inicial do ClassroomIO",
+    "goto_home": "Vá para a página inicial do NectarEDU",
     "login": "Conecte-se",
     "signup": "Inscrever-se",
     "redirecting": "Redirecionando",
@@ -1213,7 +1213,7 @@
     "integrations": {
       "heading": "Telegrama",
       "sub_heading": "Conecte sua conta ao Telegram para ser notificado sobre qualquer alteração no aplicativo.",
-      "step_authenticate": "Passo 1: Autentique sua conta por meio do bot ClassroomIO.",
+      "step_authenticate": "Passo 1: Autentique sua conta por meio do bot NectarEDU.",
       "open_bot_button": "Abrir bot",
       "step_chatId": "Passo 2: Insira o ID de bate-papo fornecido pelo bot.",
       "connect_button": "Conectar",

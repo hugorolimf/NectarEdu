@@ -45,11 +45,11 @@
     },
     {
       title: 'API',
-      desc: 'We are working on our public API which allows you to perform CRUD operations against your classroomio organization.'
+      desc: 'We are working on our public API which allows you to perform CRUD operations against your NectarEDU organization.'
     },
     {
       title: 'Embedable Course',
-      desc: 'You can embed selected course form ClassroomIO on any website of your choice'
+      desc: 'You can embed selected course form NectarEDU on any website of your choice'
     },
     {
       title: 'Landing page builder',
@@ -63,7 +63,7 @@
 </script>
 
 <svelte:head>
-  <title>Roadmap | ClassroomIO</title>
+  <title>Roadmap | NectarEDU</title>
 </svelte:head>
 
 <PageHeader className="flex flex-col items-center justify-center text-center">
@@ -73,7 +73,7 @@
   <p class="text-start md:text-center w-[80%] md:w-[40%] text-slate-700 mt-10">
     This is a live document, and will be updated regularly. To submit an idea, or to view a list of
     feature requests and ideas that we're considering, check out our <a
-      href="https://github.com/rotimi-best/classroomio/discussion"
+      href="https://github.com/rotimi-best/NectarEDU/discussion"
       class="underline">GitHub Discussions</a
     >
   </p>

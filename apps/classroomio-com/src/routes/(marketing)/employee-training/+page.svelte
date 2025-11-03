@@ -50,7 +50,7 @@
 </script>
 
 <svelte:head>
-  <title>Employee Training | ClassroomIO</title>
+  <title>Employee Training | NectarEDU</title>
 </svelte:head>
 
 <section class="flex flex-col justify-center items-center">
@@ -75,7 +75,7 @@
           <br /><span class="text-blue-700 relative">modern teams</span>
         </h1>
         <p class="lg:w-[60%] text-base md:text-lg lg:text-center font-normal text-slate-700">
-          With ClassroomIO, you can keep your teams in sync with company standards as they change
+          With NectarEDU, you can keep your teams in sync with company standards as they change
           quickly.
         </p>
       </div>
@@ -176,7 +176,7 @@
             <button
               class="py-4 px-8 border border-[#1D4ED8] outline-transparent rounded text-[#1D4ED8] text-sm font-semibold"
               data-cal-config="'layout':'month_view'"
-              data-cal-link="classroomio/demo"
+              data-cal-link="NectarEDU/demo"
             >
               Book a Demo
             </button>

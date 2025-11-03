@@ -1,7 +1,7 @@
 {
   "name": "@cio/docs",
   "version": "0.0.1",
-  "description": "ClassroomIO Documentation",
+  "description": "NectarEdu Documentation",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/classroomio/classroomio.git"
+    "url": "git+https://github.com/hugorolimf/NectarEDU.git"
   },
   "author": "Shu Ding <g@shud.in>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/classroomio/classroomio/issues"
+    "url": "https://github.com/hugorolimf/NectarEDU/issues"
   },
-  "homepage": "https://github.com/classroomio/classroomio#readme",
+  "homepage": "https://github.com/hugorolimf/NectarEDU#readme",
   "dependencies": {
     "million": "^3.0.3",
     "next": "^13.0.6",

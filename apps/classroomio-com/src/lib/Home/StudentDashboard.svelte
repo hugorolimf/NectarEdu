@@ -3,7 +3,7 @@
     <a
       href="#student-dashboard"
       class="rounded-full px-4 py-2 text-sm font-medium hover:underline bg-blue-700 underline"
-      ><span class="">yourorg</span>.classroomio.com</a
+      ><span class="">yourorg</span>.NectarEDU.com</a
     >
   </div>
   <h1

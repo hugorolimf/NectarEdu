@@ -125,7 +125,7 @@
     <!-- Org Site Name -->
     <TextField
       label={$t('add_org.org_sitename')}
-      helperMessage={`https://${siteName || ''}.classroomio.com`}
+      helperMessage={`https://${siteName || ''}.NectarEDU.com`}
       bind:value={siteName}
       name="sitename"
       type="text"
@@ -136,7 +136,7 @@
       isRequired={true}
     />
 
-    <div class="mt-5 flex items-center flex-row-reverse">
+    <div class="mt-5 flex flex-row-reverse items-center">
       <PrimaryButton
         className="px-6 py-3"
         label={$t('add_org.create')}

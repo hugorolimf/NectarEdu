@@ -124,7 +124,7 @@
 </script>
 
 <svelte:head>
-  <title>Join {data.name} on ClassroomIO</title>
+  <title>Join {data.name} on NectarEDU</title>
 </svelte:head>
 
 <AuthUI

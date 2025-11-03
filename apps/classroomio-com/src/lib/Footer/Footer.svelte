@@ -11,34 +11,34 @@
         height="32"
         loading="lazy"
         src="/logo-192.png"
-        alt="classroomio logo"
+        alt="NectarEDU logo"
         class="mb-5"
       />
       <p class="lg:text-base mb-5 mr-2 text-sm leading-7 tracking-wide text-gray-600 lg:leading-7">
         The Open Source Learning Management System for Companies
         <br />
-        ClassroomIO is the easiest way to grow your teaching business.
+        NectarEDU is the easiest way to grow your teaching business.
       </p>
       <!-- <a
-        href="https://www.producthunt.com/posts/classroomio?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-classroomio"
+        href="https://www.producthunt.com/posts/NectarEDU?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-NectarEDU"
         target="_blank"
         ><img
           loading="lazy"
           src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=425236&theme=light"
-          alt="ClassroomIO - The&#0032;Open&#0032;Source&#0032;Platform&#0032;for&#0032;Tech&#0032;Bootcamps | Product Hunt"
+          alt="NectarEDU - The&#0032;Open&#0032;Source&#0032;Platform&#0032;for&#0032;Tech&#0032;Bootcamps | Product Hunt"
           style="width: 250px; height: 54px;"
           width="250"
           height="54"
         /></a
       > -->
       <div class="mt-5 flex items-center gap-3 lg:mt-10 lg:gap-7">
-        <a href="https://www.facebook.com/classroomiohq" target="_blank" aria-label="Facebook Link">
+        <a href="https://www.facebook.com/NectarEDUhq" target="_blank" aria-label="Facebook Link">
           <LogoFacebook
             class="scale-90 cursor-pointer fill-gray-400 transition-all hover:scale-110 hover:fill-gray-500 lg:scale-150"
             size={20}
           />
         </a>
-        <a href="https://twitter.com/classroomio" target="_blank" aria-label="Twitter Link">
+        <a href="https://twitter.com/NectarEDU" target="_blank" aria-label="Twitter Link">
           <img
             width="20"
             height="20"
@@ -48,7 +48,7 @@
             class="scale-90 cursor-pointer transition-all hover:scale-110 hover:fill-gray-500 lg:scale-150"
           />
         </a>
-        <a href="https://www.youtube.com/@ClassroomIO" target="_blank" aria-label="Youtube Link">
+        <a href="https://www.youtube.com/@NectarEDU" target="_blank" aria-label="Youtube Link">
           <LogoYoutube
             class="scale-90 cursor-pointer fill-gray-400 transition-all hover:scale-110 hover:fill-gray-500 lg:scale-150"
             size={20}
@@ -134,12 +134,12 @@
           <li
             class="lg:text-base text-sm leading-6 tracking-wide text-gray-600 hover:text-gray-900"
           >
-            <a target="_blank" href="https://classroomio.com/docs/"> Help center </a>
+            <a target="_blank" href="https://NectarEDU.com/docs/"> Help center </a>
           </li>
           <li
             class="lg:text-base text-sm leading-6 tracking-wide text-gray-600 hover:text-gray-900"
           >
-            <a target="_blank" href="https://classroomio.com/docs/quickstart/signup">
+            <a target="_blank" href="https://NectarEDU.com/docs/quickstart/signup">
               Getting Started
             </a>
           </li>
@@ -164,7 +164,7 @@
           <li
             class="lg:text-base text-sm leading-6 tracking-wide text-gray-600 hover:text-gray-900"
           >
-            <a href="mailto:help@classroomio.com" target="_blank"> Support </a>
+            <a href="mailto:help@NectarEDU.com" target="_blank"> Support </a>
           </li>
           <li
             class="lg:text-base text-sm leading-6 tracking-wide text-gray-600 hover:text-gray-900"
@@ -179,7 +179,7 @@
           <li
             class="lg:text-base text-sm leading-6 tracking-wide text-gray-600 hover:text-gray-900"
           >
-            <a target="_blank" href="https://classroomio.com/docs/quickstart/signup">
+            <a target="_blank" href="https://NectarEDU.com/docs/quickstart/signup">
               Getting Started
             </a>
           </li>
@@ -202,7 +202,7 @@
   >
     <p>All rights reserved.</p>
     <p class="flex items-center">
-      ClassroomIO © {new Date().getFullYear()} by
+      NectarEDU © {new Date().getFullYear()} by
       <a href="https://twitter.com/rotimi_best" target="_blank" class="mx-1 text-blue-700 underline"
         >Rotimi Best</a
       >

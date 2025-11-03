@@ -7,5 +7,5 @@ export const load = ({ request }) => {
     event: 'signup'
   });
 
-  redirect(307, 'https://app.classroomio.com/signup');
+  redirect(307, 'https://app.NectarEDU.com/signup');
 };

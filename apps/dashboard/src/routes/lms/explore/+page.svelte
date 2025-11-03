@@ -41,9 +41,9 @@
   function filterCourses(searchValue: string, _selectedId: string, courses: Course[]) {
     if (browser) {
       if (!selectedId) {
-        selectedId = localStorage.getItem('classroomio_filter_course_key') || '0';
+        selectedId = localStorage.getItem('NectarEDU_filter_course_key') || '0';
       } else {
-        localStorage.setItem('classroomio_filter_course_key', _selectedId);
+        localStorage.setItem('NectarEDU_filter_course_key', _selectedId);
       }
     }
 
@@ -86,9 +86,9 @@
   }
 </script>
 
-<section class="w-full md:max-w-6xl md:mx-auto">
-  <div class="py-2 md:py-10 px-2 md:px-5">
-    <h1 class="dark:text-white text-3xl font-bold">{$t('explore.heading')}</h1>
+<section class="w-full md:mx-auto md:max-w-6xl">
+  <div class="px-2 py-2 md:px-5 md:py-10">
+    <h1 class="text-3xl font-bold dark:text-white">{$t('explore.heading')}</h1>
     <div class="flex flex-row-reverse">
       <div class="filter-container flex items-end justify-start">
         <Search

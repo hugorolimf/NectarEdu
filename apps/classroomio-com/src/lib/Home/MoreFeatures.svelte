@@ -19,7 +19,7 @@
       icon: team,
       title: 'Team management',
       description:
-        'Extend invitations and manage your teaching institution seamlessly through ClassroomIO.',
+        'Extend invitations and manage your teaching institution seamlessly through NectarEDU.',
       image: '/team-management.png'
     },
     {
@@ -56,7 +56,7 @@
         There is More...
       </h2>
       <p class="mt-4 text-lg text-gray-500 w-[94%] lg:w-4/5">
-        ClassroomIO is packed with useful features while we try to make it easy to use.
+        NectarEDU is packed with useful features while we try to make it easy to use.
       </p>
     </div>
 

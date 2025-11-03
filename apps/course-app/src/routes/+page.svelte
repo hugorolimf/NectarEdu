@@ -17,43 +17,43 @@
       name: 'Bootcamps',
       image: 'https://cdn.courseapp.oncws.com/templates/bootcamp-template.png',
       url: 'https://bootcamp.courseapp.oncws.com',
-      github: 'https://github.com/classroomio/classroomio'
+      github: 'https://github.com/NectarEDU/NectarEDU'
     },
     {
       name: 'Cal',
       image: 'https://cdn.courseapp.oncws.com/templates/cal-template.png',
       url: 'https://cal.courseapp.oncws.com',
-      github: 'https://github.com/classroomio/classroomio'
+      github: 'https://github.com/NectarEDU/NectarEDU'
     },
     {
       name: 'Classic',
       image: 'https://cdn.courseapp.oncws.com/templates/classic-template.png',
       url: 'https://classic.courseapp.oncws.com',
-      github: 'https://github.com/classroomio/classroomio'
+      github: 'https://github.com/NectarEDU/NectarEDU'
     },
     {
       name: 'Examprep',
       image: 'https://cdn.courseapp.oncws.com/templates/examprep-template.png',
       url: 'https://examprep.courseapp.oncws.com',
-      github: 'https://github.com/classroomio/classroomio'
+      github: 'https://github.com/NectarEDU/NectarEDU'
     },
     {
       name: 'Minimal',
       image: 'https://cdn.courseapp.oncws.com/templates/minimal-template.png',
       url: 'https://minimal.courseapp.oncws.com',
-      github: 'https://github.com/classroomio/classroomio'
+      github: 'https://github.com/NectarEDU/NectarEDU'
     },
     {
       name: 'PostHog',
       image: 'https://cdn.courseapp.oncws.com/templates/posthog-template.png',
       url: 'https://posthog.courseapp.oncws.com',
-      github: 'https://github.com/classroomio/classroomio'
+      github: 'https://github.com/NectarEDU/NectarEDU'
     },
     {
       name: 'Webflow',
       image: 'https://cdn.courseapp.oncws.com/templates/webflow-template.png',
       url: 'https://webflow.courseapp.oncws.com',
-      github: 'https://github.com/classroomio/classroomio'
+      github: 'https://github.com/NectarEDU/NectarEDU'
     }
   ];
 
@@ -102,7 +102,8 @@
 
         <BlurFade delay={0.25}>
           <p class="text-md max-w-[500px] text-center">
-            With our prebuilt templates, you can setup a fully functional course website for your product & idea in minutes.<br />
+            With our prebuilt templates, you can setup a fully functional course website for your
+            product & idea in minutes.<br />
             <span>
               Similar to the likes of
 
@@ -145,7 +146,7 @@
             animationStyle="from-right"
             videoSrc="https://www.youtube.com/embed/P2I2HoyrjVo"
             thumbnailSrc="https://cdn.courseapp.oncws.com/courseapp-og.png"
-            thumbnailAlt="Courseapp by ClassroomIO – Create your SAAS Academy in Minutes"
+            thumbnailAlt="Courseapp by NectarEDU – Create your SAAS Academy in Minutes"
           />
         </div>
       </section>
@@ -266,7 +267,7 @@
   <div class="">
     <p class="text-center text-sm text-neutral-500">
       Made with ❤️ by <a href="https://git.new/class" target="_blank" rel="noopener noreferrer">
-        classroomio
+        NectarEDU
       </a>
     </p>
   </div>

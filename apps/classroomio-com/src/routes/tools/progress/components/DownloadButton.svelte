@@ -10,7 +10,7 @@
     isDownloading = true;
     $openModal.showFullscreenButton = false;
 
-    const fileName = `${$htmlBody.name} - ${$htmlBody.mood.text} (ClassroomIO_com)`;
+    const fileName = `${$htmlBody.name} - ${$htmlBody.mood.text} (NectarEDU_com)`;
 
     if ($nodeStore) {
       setTimeout(() => {

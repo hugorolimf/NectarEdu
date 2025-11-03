@@ -149,7 +149,7 @@ importers:
         specifier: 4.21.x
         version: 4.21.2(bufferutil@4.0.9)(utf-8-validate@6.0.5)
 
-  apps/classroomio-com:
+  apps/NectarEDU-com:
     dependencies:
       html-to-image:
         specifier: ^1.11.11

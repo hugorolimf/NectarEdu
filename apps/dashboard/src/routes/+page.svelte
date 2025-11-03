@@ -18,7 +18,7 @@
     {
       title: 'Access',
       description:
-        'Quickly find any material you need to get your job done. ClassroomIO offers the All-in-on-platform'
+        'Quickly find any material you need to get your job done. NectarEDU offers the All-in-on-platform'
     },
     {
       title: 'Analytics',
@@ -53,29 +53,29 @@
 </script>
 
 <svelte:head>
-  <title>ClassroomIO - The classroom software</title>
+  <title>NectarEDU - The classroom software</title>
 </svelte:head>
 
-<div class="md:h-[93vh] w-screen flex items-center justify-center flex-col m-2 sm:m-0 font-sans">
+<div class="m-2 flex w-screen flex-col items-center justify-center font-sans sm:m-0 md:h-[93vh]">
   <!--
     <img
       src="/logo-192.png"
-      alt="ClassroomIO logo"
+      alt="NectarEDU logo"
       class="rounded inline-block mx-auto w-20 h-20 sm:w-auto sm:h-auto"
       data-atf="1"
     />
   -->
   <div>
-    <h3 class="dark:text-white text-4xl text-center">
+    <h3 class="text-center text-4xl dark:text-white">
       Classroom<span class="text-primary-700">IO</span>
     </h3>
-    <p class="dark:text-white text-lg text-center">
+    <p class="text-center text-lg dark:text-white">
       The operating system for classroooms of the future 🚀🚀🚀.
     </p>
   </div>
 
   <form on:submit|preventDefault={handleSubmit} class="my-4 hidden">
-    <div class="flex items-center flex-col sm:flex-row">
+    <div class="flex flex-col items-center sm:flex-row">
       {#if success}
         <p class="dark:text-white">You have been added successfully. Thanks for joining.</p>
       {:else}
@@ -92,12 +92,12 @@
     </div>
   </form>
 
-  <div class="flex flex-col md:flex-row mt-4">
+  <div class="mt-4 flex flex-col md:flex-row">
     {#each areas as area, index}
       <div
-        class="max-w-[350px] m-3 bg-white dark:bg-black rounded-md py-3 px-12 active shadow-xl border-2 hover:border-primary-700 {animate}"
+        class="active hover:border-primary-700 m-3 max-w-[350px] rounded-md border-2 bg-white px-12 py-3 shadow-xl dark:bg-black {animate}"
       >
-        <h3 class="dark:text-white text-3xl">
+        <h3 class="text-3xl dark:text-white">
           {#if index === 0}
             <FlowStreamReferenceIcon size={32} class="carbon-icon dark:text-white" />
           {:else if index === 1}
