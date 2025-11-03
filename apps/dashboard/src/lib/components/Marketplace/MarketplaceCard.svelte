@@ -45,9 +45,20 @@
   }
 
   function handleEnrollClick(e: Event) {
+    console.log('🔘 BUTTON CLICKED - START OF FUNCTION');
     e.stopPropagation();
+    console.log('🔘 Enroll button clicked!', { course });
     if (course) {
-      dispatch('enroll', { courseId: course.course_id });
+      console.log('📤 Dispatching enroll event:', { 
+        courseId: course.course_id,
+        slug: course.slug 
+      });
+      dispatch('enroll', { 
+        courseId: course.course_id,
+        slug: course.slug 
+      });
+    } else {
+      console.error('❌ No course data available');
     }
   }
 
@@ -175,7 +186,7 @@
       <PrimaryButton
         label="Enroll Now"
         variant={VARIANTS.CONTAINED}
-        on:click={handleEnrollClick}
+        onClick={handleEnrollClick}
         className="rounded-lg"
       />
     </div>

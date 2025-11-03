@@ -6,13 +6,36 @@
   import { profile } from '$lib/utils/store/user';
   import { currentOrg } from '$lib/utils/store/org';
 
-  function handleEnroll(event: CustomEvent<{ courseId: string }>) {
+  function handleEnroll(event: CustomEvent<{ courseId: string; slug?: string }>) {
     // Handle course enrollment
-    const { courseId } = event.detail;
+    const { courseId, slug } = event.detail;
 
-    // For now, just navigate to the course page
-    // In the future, this could open an enrollment modal
-    goto(`/course/${courseId}`);
+    console.log('🎯 Enroll clicked:', { courseId, slug, profile: $profile });
+
+    // Use slug if available, otherwise use courseId
+    const courseIdentifier = slug || courseId;
+
+    if (!courseIdentifier) {
+      console.error('❌ No course identifier available!');
+      return;
+    }
+
+    console.log('📍 Course identifier:', courseIdentifier);
+
+    // Check if user is logged in
+    if (!$profile?.id) {
+      console.log('❌ User not logged in, redirecting to login...');
+      const loginUrl = `/login?redirect=/course/${encodeURIComponent(courseIdentifier)}`;
+      console.log('🔗 Redirecting to:', loginUrl);
+      // Redirect to login with course redirect
+      goto(loginUrl);
+    } else {
+      console.log('✅ User logged in, navigating to course...');
+      const courseUrl = `/course/${courseIdentifier}`;
+      console.log('🔗 Navigating to:', courseUrl);
+      // User is logged in, navigate to course page
+      goto(courseUrl);
+    }
   }
 
   onMount(() => {

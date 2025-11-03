@@ -35,14 +35,19 @@ export default ({ mode }) => {
 
 function getServer(params: any) {
   const { VITE_USE_HTTPS_ON_LOCALHOST } = params || {};
+  const config: any = {
+    host: '0.0.0.0', // Expor na rede local
+    port: 5173
+  };
+
   if (VITE_USE_HTTPS_ON_LOCALHOST === 'true') {
-    return {
-      https: {
-        key: fs.readFileSync(`${__dirname}/cert/key.pem`),
-        cert: fs.readFileSync(`${__dirname}/cert/cert.pem`)
-      }
+    config.https = {
+      key: fs.readFileSync(`${__dirname}/cert/key.pem`),
+      cert: fs.readFileSync(`${__dirname}/cert/cert.pem`)
     };
   }
+
+  return config;
 }
 
 // function getSentryConfig(params: any) {

@@ -15,7 +15,8 @@ export const ROUTE = {
   DISCUSSIONS: '/discussions',
   ASK: '/ask',
   FORGOT: '/forgot',
-  RESET: '/reset'
+  RESET: '/reset',
+  MARKETPLACE: '/marketplace'
 };
 
 export const PUBLIC_ROUTES = [
@@ -27,6 +28,7 @@ export const PUBLIC_ROUTES = [
   ROUTE.RESET,
   `^${ROUTE.PAGES}/.*`,
   `^${ROUTE.COURSE}/.*`,
+  ROUTE.MARKETPLACE,
   '/404'
 ];
 

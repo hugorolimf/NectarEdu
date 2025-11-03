@@ -38,3 +38,13 @@ yarn-error.log*
 vite.config.ts*.mjs
 
 .pnpm-store/*
+# Docu
+mentation and temporary files
+*.md
+!README.md
+!CONTRIBUTING.md
+!LICENSE.md
+!CHANGELOG.md
+*.sql
+*.ps1
+.pnpmfile.cjs

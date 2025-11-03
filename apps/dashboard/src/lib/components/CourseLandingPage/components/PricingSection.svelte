@@ -29,16 +29,39 @@
   function handleJoinCourse() {
     if (editMode) return;
 
+    console.log('🎯 Join course clicked:', { 
+      courseId: courseData?.id, 
+      isFree, 
+      slug: courseData?.slug 
+    });
+
     capturePosthogEvent('join_course', {
       course_id: courseData?.id,
       course_title: courseData?.title,
       course_cost: courseData?.cost,
       course_free: isFree
     });
+
+    // Check if user is logged in by checking if we have a current org
+    const isLoggedIn = $currentOrg?.id;
+    console.log('🔐 User logged in?', isLoggedIn);
+
+    if (!isLoggedIn) {
+      // User not logged in, redirect to login with course redirect
+      const courseSlug = courseData?.slug || courseData?.id;
+      const loginUrl = `/login?redirect=/course/${courseSlug}`;
+      console.log('❌ Not logged in, redirecting to:', loginUrl);
+      goto(loginUrl);
+      return;
+    }
+
+    // User is logged in, proceed with enrollment
     if (isFree) {
       const link = getStudentInviteLink(courseData, $currentOrg.siteName, $currentOrgDomain);
+      console.log('✅ Logged in, going to:', link);
       goto(link);
     } else {
+      console.log('💰 Opening payment modal');
       openModal = true;
     }
 
