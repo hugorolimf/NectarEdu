@@ -12,6 +12,7 @@
   import { ChevronRight, SettingsAdjust } from 'carbon-icons-svelte';
   import ForumIcon from 'carbon-icons-svelte/lib/Forum.svelte';
   import HelpIcon from 'carbon-icons-svelte/lib/Help.svelte';
+  import ShoppingCart from 'carbon-icons-svelte/lib/ShoppingCart.svelte';
 
   import { goto } from '$app/navigation';
   import ProfileMenu from '$lib/components/Org/ProfileMenu/index.svelte';
@@ -62,6 +63,12 @@
       show: true
     },
     {
+      path: '/marketplace',
+      label: $t('org_navigation.marketplace'),
+      isActive: $page.url.pathname === '/marketplace',
+      show: true
+    },
+    {
       path: '/community',
       label: $t('org_navigation.community'),
       isActive: $page.url.pathname.includes(`${$currentOrgPath}/community`),
@@ -77,7 +84,7 @@
       path: '/setup',
       label: $t('org_navigation.setup'),
       isActive: $page.url.pathname.includes(`${$currentOrgPath}/setup`),
-      show: $isOrgAdmin
+      show: $isOrgAdmin || false
     }
   ];
 </script>
@@ -98,7 +105,7 @@
           {#each menuItems as menuItem}
             {#if menuItem.show}
               <a
-                href="{$currentOrgPath}{menuItem.path}"
+                href={menuItem.path === '/marketplace' ? '/marketplace' : `${$currentOrgPath}${menuItem.path}`}
                 class="text-black no-underline"
                 on:click={toggleSidebar}
               >
@@ -111,6 +118,8 @@
                     <HomeIcon />
                   {:else if menuItem.path === '/courses'}
                     <CourseIcon />
+                  {:else if menuItem.path === '/marketplace'}
+                    <ShoppingCart size={20} class="carbon-icon fill-[#000] dark:fill-[#fff]" />
                   {:else if menuItem.path === '/site'}
                     <SiteSettingsIcon />
                   {:else if menuItem.path === '/community'}

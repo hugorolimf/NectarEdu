@@ -44,6 +44,44 @@
     "deeply_appreciate": "we deeply appreciate it and are at your service."
   },
 
+  "marketplace": {
+    "heading": "Course Marketplace",
+    "description": "Discover and enroll in courses from top instructors",
+    "search_placeholder": "Search for courses...",
+    "all_categories": "All Categories",
+    "featured_only": "Featured Only",
+    "all_courses": "All Courses",
+    "load_more": "Load More",
+    "loading": "Loading...",
+    "no_courses_found": "No courses found",
+    "no_courses_description": "Try adjusting your filters or check back later for new courses.",
+    "enroll_now": "Enroll Now",
+    "free": "Free",
+    "reviews": "reviews",
+    "students": "students",
+    "categories": {
+      "general": "General",
+      "technology": "Technology",
+      "business": "Business",
+      "design": "Design",
+      "marketing": "Marketing",
+      "development": "Development"
+    }
+  },
+
+  "org_navigation": {
+    "dashboard": "Dashboard",
+    "courses": "Courses",
+    "marketplace": "Marketplace",
+    "community": "Community",
+    "audience": "Audience",
+    "setup": "Setup",
+    "help": "Help",
+    "early_adopter": "Early Adopter",
+    "unlock": "Unlock all features",
+    "upgrade": "Upgrade"
+  },
+
   "login": {
     "welcome": "Welcome back",
     "email": "Your email",

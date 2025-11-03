@@ -1607,6 +1607,42 @@
     "no_analytics_data": "Sem dados de análise",
     "no_analytics_description": "Não é possível carregar dados de análise para este curso. Tente novamente mais tarde ou entre em contato com o suporte se o problema persistir."
   },
+  "marketplace": {
+    "heading": "Mercado de Cursos",
+    "description": "Descubra e matricule-se em cursos dos melhores instrutores",
+    "search_placeholder": "Buscar cursos...",
+    "all_categories": "Todas as Categorias",
+    "featured_only": "Somente Destaques",
+    "all_courses": "Todos os Cursos",
+    "load_more": "Carregar Mais",
+    "loading": "Carregando...",
+    "no_courses_found": "Nenhum curso encontrado",
+    "no_courses_description": "Tente ajustar seus filtros ou verifique novamente para novos cursos.",
+    "enroll_now": "Matricular-se Agora",
+    "free": "Grátis",
+    "reviews": "avaliações",
+    "students": "alunos",
+    "categories": {
+      "general": "Geral",
+      "technology": "Tecnologia",
+      "business": "Negócios",
+      "design": "Design",
+      "marketing": "Marketing",
+      "development": "Desenvolvimento"
+    }
+  },
+  "org_navigation": {
+    "dashboard": "Painel",
+    "courses": "Cursos",
+    "marketplace": "Mercado",
+    "community": "Comunidade",
+    "audience": "Audiência",
+    "setup": "Configuração",
+    "help": "Ajuda",
+    "early_adopter": "Adotante Inicial",
+    "unlock": "Desbloqueie todos os recursos",
+    "upgrade": "Atualizar"
+  },
   "common": {
     "unsaved_changes": {
       "message": "Você tem mudanças não salvas. Tem certeza de que deseja sair?"
