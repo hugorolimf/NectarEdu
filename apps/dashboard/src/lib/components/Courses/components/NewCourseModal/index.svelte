@@ -131,7 +131,7 @@
     }
 
     // Redirect to marketplace to show the new course
-    onClose(`/org/${$currentOrg.siteName}/marketplace`);
+    onClose(`/marketplace`);
     isLoading = false;
   }
 
